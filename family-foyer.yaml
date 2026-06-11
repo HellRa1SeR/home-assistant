@@ -2,14 +2,14 @@ kiosk_mode:
   user_settings:
     - users:
         - kiosk
-      kiosk: true
+      kiosk: false
 decluttering_templates:
   mushroom_title_card:
     default:
-      - title: ''
+      - title: ""
     card:
       type: custom:mushroom-title-card
-      title: '[[title]]'
+      title: "[[title]]"
       card_mod:
         style: |
           ha-card {
@@ -17,10 +17,10 @@ decluttering_templates:
           }
   mushroom_room_title_card:
     default:
-      - title: ''
+      - title: ""
     card:
       type: custom:mushroom-title-card
-      title: '[[title]]'
+      title: "[[title]]"
       card_mod:
         style: |
           ha-card {
@@ -28,12 +28,12 @@ decluttering_templates:
           }          
   mushroom_title_subtitle_card:
     default:
-      title: ''
-      subtitle: ''
+      title: ""
+      subtitle: ""
     card:
       type: custom:mushroom-title-card
-      title: '[[title]]'
-      subtitle: '[[subtitle]]'
+      title: "[[title]]"
+      subtitle: "[[subtitle]]"
       card_mod:
         style: |
           ha-card {
@@ -49,13 +49,13 @@ decluttering_templates:
       - navigation_path
     card:
       type: custom:mushroom-template-card
-      primary: '[[room_name]]'
+      primary: "[[room_name]]"
       secondary: >-
         {{ states('[[temperature_sensor]]') | round(1) }}°C / {{
         states('[[humidity_sensor]]') | round(1) }}%
       tap_action:
         action: navigate
-        navigation_path: '[[navigation_path]]'
+        navigation_path: "[[navigation_path]]"
       hold_action:
         action: none
       double_tap_action:
@@ -82,9 +82,9 @@ decluttering_templates:
       - icon
     card:
       type: custom:mushroom-template-card
-      entity: '[[entity]]'
+      entity: "[[entity]]"
       layout: horizontal
-      icon: '[[icon]]'
+      icon: "[[icon]]"
       icon_color: |-
         {% if is_state(entity, 'on') %} 
           #ecce85
@@ -122,14 +122,14 @@ decluttering_templates:
       - entity: light.example
     card:
       type: custom:my-slider-v2
-      entity: '[[entity]]'
+      entity: "[[entity]]"
       allowTapping: false
       allowSliding: true
       styles:
         container:
           - border-radius: 30px
         card:
-          - margin-top: '-8px'
+          - margin-top: "-8px"
           - height: 75px
         progress:
           - background: none
@@ -147,14 +147,14 @@ decluttering_templates:
       - entity: light.example
     card:
       type: custom:my-slider-v2
-      entity: '[[entity]]'
+      entity: "[[entity]]"
       allowTapping: false
       allowSliding: true
       styles:
         container:
           - border-radius: 30px
         card:
-          - margin-top: '-8px'
+          - margin-top: "-8px"
           - height: 75px
         progress:
           - background: var(--gradient-progress)
@@ -202,8 +202,8 @@ decluttering_templates:
             - type: conditional
               conditions:
                 - condition: state
-                  entity: '[[windows_entity]]'
-                  state: 'on'
+                  entity: "[[windows_entity]]"
+                  state: "on"
               chip:
                 type: template
                 content: |
@@ -254,8 +254,8 @@ decluttering_templates:
         - type: conditional
           conditions:
             - condition: state
-              entity: '[[door_entity]]'
-              state: 'on'
+              entity: "[[door_entity]]"
+              state: "on"
           chip:
             type: template
             content: |
@@ -272,8 +272,8 @@ decluttering_templates:
         - type: conditional
           conditions:
             - condition: state
-              entity: '[[window_entity]]'
-              state: 'on'
+              entity: "[[window_entity]]"
+              state: "on"
           chip:
             type: template
             content: |
@@ -290,31 +290,31 @@ decluttering_templates:
       height: 25
       compact: true
       entities:
-        - entity: '[[temp_entity]]'
-          name: '[[temp_name]]'
+        - entity: "[[temp_entity]]"
+          name: "[[temp_name]]"
           thresholds:
             - value: 16
-              color: '#CEB2F5'
+              color: "#CEB2F5"
             - value: 18
-              color: '#5EBDEE'
+              color: "#5EBDEE"
             - value: 21
-              color: '#9cc8b8'
+              color: "#9cc8b8"
             - value: 24
-              color: '#e7b562'
+              color: "#e7b562"
             - value: 27
-              color: '#FF564B'
+              color: "#FF564B"
             - value: 35
-              color: '#99332d'
-        - entity: '[[hum_entity]]'
-          name: '[[hum_name]]'
+              color: "#99332d"
+        - entity: "[[hum_entity]]"
+          name: "[[hum_name]]"
           show_labels: true
           thresholds:
             - value: 0
-              color: '#99332d'
+              color: "#99332d"
             - value: 31
-              color: '#228B22'
+              color: "#228B22"
             - value: 51
-              color: '#99332d'
+              color: "#99332d"
 button_card_templates:
   light_on_button:
     tap_action:
@@ -322,7 +322,7 @@ button_card_templates:
     styles:
       grid:
         - grid-template-columns: 64px 1fr
-        - grid-template-areas: '"i n"'
+        - grid-template-areas: "\"i n\""
       card:
         - background: none
         - height: 75px
@@ -344,7 +344,7 @@ button_card_templates:
     styles:
       grid:
         - grid-template-columns: 64px 1fr
-        - grid-template-areas: '"i n"'
+        - grid-template-areas: "\"i n\""
       card:
         - background: >-
             color-mix(in srgb, var(--md-sys-color-surface-variant) 40%,
@@ -368,7 +368,7 @@ button_card_templates:
     styles:
       grid:
         - grid-template-columns: 64px 1fr
-        - grid-template-areas: '"i n"'
+        - grid-template-areas: "\"i n\""
       card:
         - background: >-
             color-mix(in srgb, var(--md-sys-color-surface-variant) 40%,
@@ -385,7 +385,7 @@ button_card_templates:
         - font-weight: 400
         - color: var(--primary-text-color)
     state:
-      - value: 'on'
+      - value: "on"
         styles:
           card:
             - background: var(--md-sys-color-primary)
@@ -445,7 +445,7 @@ views:
                 name: >-
                   {{ state_attr('weather.klou', 'temperature') }} °F, {{
                   states('weather.klou') | title }}
-                icon: '{{ states(''weather.klou'') }}'
+                icon: "{{ states('weather.klou') }}"
                 tap_action:
                   action: navigate
                   navigation_path: /family-foyer/notifications
@@ -499,7 +499,7 @@ views:
                     color: var(--primary-text-color)
               - layout: name
                 entity: weather.klou
-                name: '{{ state_attr(''weather.klou'', ''humidity'') }} %'
+                name: "{{ state_attr('weather.klou', 'humidity') }} %"
                 tap_action:
                   action: navigate
                   navigation_path: /family-foyer/notifications
@@ -534,147 +534,13 @@ views:
             active-background: var(--md-sys-color-tertiary)
             active-text-color: var(--md-sys-color-on-tertiary)
             tabs:
-              - title: Climate
+              - title: Basement
                 icon: mdi:hvac
                 card:
-                  type: vertical-stack
-                  cards:
-                    - type: custom:vertical-stack-in-card
-                      cards:
-                        - type: grid
-                          square: false
-                          columns: 2
-                          cards:
-                            - type: custom:mushroom-template-card
-                              entity: sensor.house_average_temperature
-                              primary: |
-                                {{ states(entity) | round(1) }}°C 
-                              secondary: |
-                                {{ state_attr(entity,'friendly_name') }} 
-                              icon: >
-                                {% set hvac_mode = states('climate.heat_pump')
-                                %}
-
-                                {% if hvac_mode == 'heat' %} mdi:fire
-
-                                {% elif hvac_mode == 'cool' %} mdi:snowflake
-
-                                {% elif hvac_mode == 'fan_only' %} mdi:fan
-
-                                {% else %} mdi:thermometer
-
-                                {% endif %}
-                              tap_action:
-                                action: more-info
-                              color: >
-                                {% set hvac_mode = states('climate.heat_pump')
-                                %}
-
-                                {% if hvac_mode == 'heat' %} #FF6F22
-
-                                {% elif hvac_mode == 'cool' %} #2196F3
-
-                                {% elif hvac_mode == 'fan_only' %} #029688
-
-                                {% else %}
-                                  {% set temp = states('sensor.house_average_temperature') | float %}
-                                  {% if temp < 16 %} #CEB2F5
-                                  {% elif temp < 18 %} #5EBDEE
-                                  {% elif temp < 22 %} #9cc8b8
-                                  {% elif temp < 24 %} #e7b562
-                                  {% elif temp < 27 %} #FF564B
-                                  {% else %} #99332d
-                                  {% endif %}
-                                {% endif %}
-                              features_position: bottom
-                            - type: custom:mushroom-template-card
-                              entity: sensor.outdoor_temperature
-                              primary: |
-                                {{ states(entity) | round(1) }}°C 
-                              secondary: |
-                                Outdoor Feels Like
-                              icon: '{{ states(''sensor.weather_condition_icon'') }}'
-                              icon_color: >
-                                {% set temp =
-                                state_attr('weather.forecast_home',
-                                'temperature') | float %}
-
-                                {% if temp < 16 %} #907CAB
-
-                                {% elif temp < 19 %} #4790b6
-
-                                {% elif temp < 22 %} #77998c
-
-                                {% elif temp < 24 %} #b08a4a
-
-                                {% elif temp < 27 %} #c34139      
-
-                                {% else %} #752722 {% endif %}
-                              tap_action:
-                                action: navigate
-                                navigation_path: /family-foyer/notifications
-                        - type: custom:config-template-card
-                          entities:
-                            - sensor.house_average_temperature
-                            - sensor.outdoor_temperature
-                            - climate.heat_pump
-                          variables:
-                            - states['climate.heat_pump'].state
-                            - states['sensor.house_average_temperature'].state
-                            - states['sensor.outdoor_temperature'].state
-                          card:
-                            type: custom:mini-graph-card
-                            entities:
-                              - entity: sensor.house_average_temperature
-                                name: House Average Temperature
-                                color: |-
-                                  ${vars[0] === 'heat' ? '#FF6F22' : 
-                                    (vars[0] === 'cool' ? '#2196F3' : 
-                                    (vars[0] === 'fan_only' ? '#029688' : 
-                                    (vars[1] < 16 ? '#CEB2F5' :
-                                    (vars[1] < 18 ? '#5EBDEE' :
-                                    (vars[1] < 22 ? '#9cc8b8' :
-                                    (vars[1] < 24 ? '#e7b562' :
-                                    (vars[1] < 27 ? '#FF564B' : '#99332d')))))))}
-                              - entity: sensor.outdoor_temperature
-                                name: Outdoor Temperature
-                                color: |-
-                                  ${vars[2] < 16 ? '#907CAB' :
-                                    (vars[2] < 18 ? '#4790b6' :        
-                                    (vars[2] < 22 ? '#77998c' :
-                                    (vars[2] < 24 ? '#b08a4a' :
-                                    (vars[2] < 27 ? '#c34139' :'#752722'))))}
-                                y_axis: secondary
-                            hours_to_show: 24
-                            line_width: 3
-                            font_size: 50
-                            animate: true
-                            show:
-                              name: false
-                              icon: false
-                              state: false
-                              legend: false
-                              fill: fade
-                        - type: horizontal-stack
-                          cards:
-                            - type: custom:mushroom-climate-card
-                              entity: climate.heat_pump
-                              primary_info: none
-                              secondary_info: none
-                              icon_type: none
-                              show_temperature_control: true
-                            - type: custom:mushroom-climate-card
-                              entity: climate.heat_pump
-                              primary_info: none
-                              secondary_info: none
-                              icon_type: none
-                              hvac_modes:
-                                - cool
-                                - heat
-                                - fan_only
-                                - 'off'
-              - title: Sprinkler
-                icon: mdi:sprinkler-variant
+                  type: markdown
+                  content: "## New Tab Content"
+              - title: Upstairs
+                icon: mdi:hvac
                 card:
                   type: custom:vertical-stack-in-card
                   cards:
@@ -763,6 +629,35 @@ views:
                           #89CFF0
                         {% endif %}
                       features_position: bottom
+              - title: Downstairs
+                icon: mdi:hvac
+                card:
+                  type: vertical-stack
+                  cards:
+                    - type: custom:vertical-stack-in-card
+                      cards:
+                        - type: horizontal-stack
+                          cards:
+                            - type: custom:mushroom-climate-card
+                              entity: climate.thermostat
+                        - type: horizontal-stack
+                          cards:
+                            - type: custom:mushroom-climate-card
+                              entity: climate.thermostat
+                              primary_info: none
+                              secondary_info: none
+                              icon_type: none
+                              show_temperature_control: true
+                            - type: custom:mushroom-climate-card
+                              entity: climate.thermostat
+                              primary_info: none
+                              secondary_info: none
+                              icon_type: none
+                              hvac_modes:
+                                - cool
+                                - heat
+                                - fan_only
+                                - "off"
         view_layout:
           grid-area: title2
       - type: vertical-stack
@@ -788,7 +683,7 @@ views:
                         action: navigate
                         navigation_path: /family-foyer/alarmo
                       icon: mdi:bell-ring
-                      icon_color: '#d14f3a'
+                      icon_color: "#d14f3a"
                   - type: conditional
                     conditions:
                       - entity: alarm_control_panel.alarmo
@@ -801,7 +696,7 @@ views:
                         action: navigate
                         navigation_path: /family-foyer/alarmo
                       icon: mdi:shield-lock
-                      icon_color: '#69ac5a'
+                      icon_color: "#69ac5a"
                   - type: conditional
                     conditions:
                       - entity: alarm_control_panel.alarmo
@@ -814,7 +709,7 @@ views:
                         action: navigate
                         navigation_path: /family-foyer/alarmo
                       icon: mdi:shield
-                      icon_color: '#efa340'
+                      icon_color: "#efa340"
                   - type: conditional
                     conditions:
                       - entity: alarm_control_panel.alarmo
@@ -827,7 +722,7 @@ views:
                         action: navigate
                         navigation_path: /family-foyer/alarmo
                       icon: mdi:shield-outline
-                      icon_color: '#efa340'
+                      icon_color: "#efa340"
                   - type: conditional
                     conditions:
                       - entity: alarm_control_panel.alarmo
@@ -839,7 +734,7 @@ views:
                         action: navigate
                         navigation_path: /family-foyer/alarmo
                       icon: mdi:shield-off
-                      icon_color: '#disarmed'
+                      icon_color: "#disarmed"
                   - type: conditional
                     conditions:
                       - condition: state
@@ -850,7 +745,7 @@ views:
                       entity: sensor.latest_nearby_quake
                       tap_action:
                         action: navigate
-                        navigation_path: '#earthquake-warning'
+                        navigation_path: "#earthquake-warning"
                       icon: mdi:earth
                       icon_color: >
                         {% set mag = state_attr('sensor.latest_nearby_quake',
@@ -937,10 +832,12 @@ views:
                       margin-top: 1.3em
                     }
           - entities:
-              - entity: calendar.1
-                accent_color: '#ff6a6a'
+              - entity: calendar.siddharth_s_calendar
+                accent_color: "#ff6a6a"
+                show_time: false
+                show_location: false
               - entity: calendar.2
-                accent_color: '#71c8fe'
+                accent_color: "#71c8fe"
             days_to_show: 6
             compact_events_to_show: 6
             background_color: transparent
@@ -988,7 +885,7 @@ views:
             conditions:
               - condition: state
                 entity: media_player.your_media_here
-                state_not: 'on'
+                state_not: "on"
               - condition: state
                 entity: media_player.your_media_here
                 state_not: playing
@@ -1037,6 +934,260 @@ views:
               show_decimal: false
         view_layout:
           grid-area: title3
+      - type: horizontal-stack
+        cards:
+          - type: custom:stack-in-card
+            mode: horizontal
+            cards:
+              - type: vertical-stack
+                cards:
+                  - type: custom:decluttering-card
+                    template: room_summary_card
+                    variables:
+                      - room_name: Garage
+                      - temperature_sensor: sensor.garage_temperature
+                      - humidity_sensor: sensor.garage_humidity
+                      - navigation_path: /family-foyer/garage
+                  - type: custom:decluttering-card
+                    template: big_icon_toggle_card
+                    variables:
+                      - entity: switch.light_switch_grg
+                      - icon: mdi:garage-variant
+              - type: custom:mushroom-chips-card
+                chips:
+                  - type: template
+                    entity: switch.light_switch_grg
+                    tap_action:
+                      action: toggle
+                    icon: mdi:light-recessed
+                    card_mod:
+                      style: |
+                        ha-card {
+                          --chip-background: {% if is_state('switch.light_switch_grg', 'on') %} #D3C890 {% else %} #353535 {% endif %};
+                          --color: {% if is_state('switch.light_switch_grg', 'on') %} #5b5326 {% else %} #dbdbdb {% endif %};
+                          justify-content: center;
+                          height: 35px !important;
+                          width: 35px !important;
+                          border: 0 !important;
+                          box-shadow: none !important;
+                          border-radius: 22px !important;
+                        }
+                  - type: template
+                    entity: binary_sensor.doors_grg
+                    tap_action:
+                      action: navigate
+                      navigation_path: /family-foyer/garage
+                    icon: |
+                      {% if is_state(entity, 'on') %}
+                        mdi:door-open
+                      {% else %}
+                        mdi:door-closed
+                      {% endif %}
+                    card_mod:
+                      style: |
+                        ha-card {
+                          --chip-background: {% if is_state('binary_sensor.doors_grg', 'on') %} #bc000a {% else %} #353535 {% endif %};
+                          --color: {% if is_state('binary_sensor.doors_grg', 'on') %} #ffffff {% else %} #dbdbdb {% endif %};
+                          justify-content: center;
+                          height: 35px !important;
+                          width: 35px !important;
+                          border: 0 !important;
+                          box-shadow: none !important;
+                          border-radius: 22px !important;
+                        }
+                        ha-card:after {
+                          content: "{{ '' if (expand(states.binary_sensor.doors_grg) | selectattr('state', 'eq', 'on') | list | count) == 0 else expand(states.binary_sensor.doors_grg) | selectattr('state', 'eq', 'on') | list | count }}";
+                          position: absolute;
+                          top: -10%;
+                          right: -10%;
+                          display:  {% if is_state('binary_sensor.doors_grg', 'on') %} flex {% else %} none {% endif %};
+                          justify-content: center;
+                          align-items: center;
+                          width: 14px;
+                          height: 14px;
+                          font-size: 9px;
+                          font-weight: 700;
+                          border-radius: 50%;
+                          background: {% if is_state('binary_sensor.doors_grg', 'on') %} #ffffff {% else %} var(--primary-text-color) {% endif %};
+                          color: #b02e25;
+                        }
+                card_mod:
+                  style: |
+                    .chip-container {
+                      flex-flow: column wrap-reverse !important;
+                      display: flex !important;
+                      --chip-spacing: 8px;
+                      margin: 12px;
+                    }
+                    .: |
+                    .container {
+                      align: end;
+                    }
+            card_mod:
+              style: |
+                ha-card {
+                  background:
+                  {% set temp = states('sensor.garage_temperature') | float %}
+                    {% if temp < 13 %}
+                      rgba(172, 156, 175, 0.8)
+                    {% elif temp < 16 %}          
+                      rgba(215, 196, 219, 0.8)
+                    {% elif temp < 19 %}
+                      rgba(163, 217, 245, 0.8)
+                    {% elif temp < 22 %}
+                      rgba(205, 227, 219, 0.8)
+                    {% elif temp < 24 %}
+                      rgba(255, 229, 153, 0.8)
+                    {% elif temp < 27 %}
+                      rgba(247, 190, 129, 0.8)
+                    {% else %}
+                      rgba(224, 102, 102, 0.8)
+                    {% endif %};        
+                  max-width: 100%;
+                  min-width: 50%;
+                  height: 186px;
+                }
+          - type: custom:stack-in-card
+            mode: horizontal
+            cards:
+              - type: vertical-stack
+                cards:
+                  - type: custom:decluttering-card
+                    template: room_summary_card
+                    variables:
+                      - room_name: Living
+                      - temperature_sensor: sensor.living_room_temperature
+                      - humidity_sensor: sensor.living_area_humidity
+                      - navigation_path: /family-foyer/living-area
+                  - type: custom:decluttering-card
+                    template: big_icon_toggle_card
+                    variables:
+                      - entity: light.lights_sofa
+                      - icon: mdi:sofa
+              - type: custom:mushroom-chips-card
+                chips:
+                  - type: template
+                    entity: climate.living_room
+                    tap_action:
+                      action: toggle
+                    icon: |
+                      {% if is_state(entity, 'heat_cool') %}
+                        mdi:heat-pump
+                      {% else %}
+                        mdi:heat-pump-outline
+                      {% endif %}
+                    card_mod:
+                      style: |
+                        ha-card {
+                          --chip-background: 
+                            {% if is_state('climate.living_room', 'heat_cool') and is_state('climate.heat_pump', 'cool') %} #b5e0f7 
+                            {% elif is_state('climate.living_room', 'heat_cool') and is_state('climate.heat_pump', 'heat') %} #fa6f66
+                            {% elif is_state('climate.living_room', 'heat_cool') and is_state('climate.heat_pump', 'fan_only') %} #DEDEDE
+                            {% elif is_state('climate.living_room', 'heat_cool') and is_state('climate.heat_pump', 'off') %} #FFEA00
+                            {% else %} #353535 
+                            {% endif %};
+                          --color: {% if is_state('climate.living_room', 'heat_cool') %} var(--primary-text-color){% else %} #dbdbdb {% endif %};
+                          justify-content: center;
+                          height: 35px !important;
+                          width: 35px !important;
+                          border: 0 !important;
+                          box-shadow: none !important;
+                          border-radius: 22px !important;
+                        }
+                  - type: template
+                    entity: light.lights_sofa
+                    tap_action:
+                      action: toggle
+                    icon: mdi:light-recessed
+                    card_mod:
+                      style: |
+                        ha-card {
+                          --chip-background: {% if is_state('light.lights_sofa', 'on') %} #D3C890 {% else %} #353535 {% endif %};
+                          --color: {% if is_state('light.lights_sofa', 'on') %} #5b5326 {% else %} #dbdbdb {% endif %};
+                          justify-content: center;
+                          height: 35px !important;
+                          width: 35px !important;
+                          border: 0 !important;
+                          box-shadow: none !important;
+                          border-radius: 22px !important;
+                        }
+                  - type: template
+                    entity: binary_sensor.doors_la
+                    tap_action:
+                      action: navigate
+                      navigation_path: /family-foyer/living-area
+                    icon: |
+                      {% if is_state(entity, 'on') %}
+                        mdi:door-sliding-open
+                      {% else %}
+                        mdi:door-sliding
+                      {% endif %}          
+                    card_mod:
+                      style: |
+                        ha-card {
+                          --chip-background: {% if is_state('binary_sensor.doors_la', 'on') %} #bc000a {% else %} #353535 {% endif %};
+                          --color: {% if is_state('binary_sensor.doors_la', 'on') %} #ffffff {% else %} #dbdbdb {% endif %};
+                          justify-content: center;
+                          height: 35px !important;
+                          width: 35px !important;
+                          border: 0 !important;
+                          box-shadow: none !important;
+                          border-radius: 22px !important;
+                        }
+                        ha-card:after {
+                          content: "{{ '' if (expand(states.binary_sensor.doors_la) | selectattr('state', 'eq', 'on') | list | count) == 0 else expand(states.binary_sensor.doors_la) | selectattr('state', 'eq', 'on') | list | count }}";
+                          position: absolute;
+                          top: -10%;
+                          right: -10%;
+                          display:  {% if is_state('binary_sensor.doors_la', 'on') %} flex {% else %} none {% endif %};
+                          justify-content: center;
+                          align-items: center;
+                          width: 14px;
+                          height: 14px;
+                          font-size: 9px;
+                          font-weight: 700;
+                          border-radius: 50%;
+                          background: {% if is_state('binary_sensor.doors_la', 'on') %} #ffffff {% else %} var(--primary-text-color) {% endif %};
+                          color: #b02e25;
+                        }
+                card_mod:
+                  style: |
+                    .chip-container {
+                      flex-flow: column wrap-reverse !important;
+                      display: flex !important;
+                      --chip-spacing: 8px;
+                      margin: 12px;
+                    }
+                    .: |
+                    .container {
+                      align: end;
+                    }
+            card_mod:
+              style: |
+                ha-card {
+                  background:
+                  {% set temp = states('sensor.living_room_temperature') | float %}
+                    {% if temp < 13 %}
+                      rgba(172, 156, 175, 0.8)
+                    {% elif temp < 16 %}          
+                      rgba(215, 196, 219, 0.8)
+                    {% elif temp < 19 %}
+                      rgba(163, 217, 245, 0.8)
+                    {% elif temp < 22 %}
+                      rgba(205, 227, 219, 0.8)
+                    {% elif temp < 24 %}
+                      rgba(255, 229, 153, 0.8)
+                    {% elif temp < 27 %}
+                      rgba(247, 190, 129, 0.8)
+                    {% else %}
+                      rgba(224, 102, 102, 0.8)
+                    {% endif %};        
+                  max-width: 100%;
+                  min-width: 50%;
+                  height: 186px;
+                }
+        view_layout:
+          grid-area: left3
       - type: horizontal-stack
         cards:
           - type: custom:stack-in-card
@@ -1329,457 +1480,6 @@ views:
                   - type: custom:decluttering-card
                     template: room_summary_card
                     variables:
-                      - room_name: Garage
-                      - temperature_sensor: sensor.garage_temperature
-                      - humidity_sensor: sensor.garage_humidity
-                      - navigation_path: /family-foyer/garage
-                  - type: custom:decluttering-card
-                    template: big_icon_toggle_card
-                    variables:
-                      - entity: switch.light_switch_grg
-                      - icon: mdi:garage-variant
-              - type: custom:mushroom-chips-card
-                chips:
-                  - type: template
-                    entity: switch.light_switch_grg
-                    tap_action:
-                      action: toggle
-                    icon: mdi:light-recessed
-                    card_mod:
-                      style: |
-                        ha-card {
-                          --chip-background: {% if is_state('switch.light_switch_grg', 'on') %} #D3C890 {% else %} #353535 {% endif %};
-                          --color: {% if is_state('switch.light_switch_grg', 'on') %} #5b5326 {% else %} #dbdbdb {% endif %};
-                          justify-content: center;
-                          height: 35px !important;
-                          width: 35px !important;
-                          border: 0 !important;
-                          box-shadow: none !important;
-                          border-radius: 22px !important;
-                        }
-                  - type: template
-                    entity: binary_sensor.doors_grg
-                    tap_action:
-                      action: navigate
-                      navigation_path: /family-foyer/garage
-                    icon: |
-                      {% if is_state(entity, 'on') %}
-                        mdi:door-open
-                      {% else %}
-                        mdi:door-closed
-                      {% endif %}
-                    card_mod:
-                      style: |
-                        ha-card {
-                          --chip-background: {% if is_state('binary_sensor.doors_grg', 'on') %} #bc000a {% else %} #353535 {% endif %};
-                          --color: {% if is_state('binary_sensor.doors_grg', 'on') %} #ffffff {% else %} #dbdbdb {% endif %};
-                          justify-content: center;
-                          height: 35px !important;
-                          width: 35px !important;
-                          border: 0 !important;
-                          box-shadow: none !important;
-                          border-radius: 22px !important;
-                        }
-                        ha-card:after {
-                          content: "{{ '' if (expand(states.binary_sensor.doors_grg) | selectattr('state', 'eq', 'on') | list | count) == 0 else expand(states.binary_sensor.doors_grg) | selectattr('state', 'eq', 'on') | list | count }}";
-                          position: absolute;
-                          top: -10%;
-                          right: -10%;
-                          display:  {% if is_state('binary_sensor.doors_grg', 'on') %} flex {% else %} none {% endif %};
-                          justify-content: center;
-                          align-items: center;
-                          width: 14px;
-                          height: 14px;
-                          font-size: 9px;
-                          font-weight: 700;
-                          border-radius: 50%;
-                          background: {% if is_state('binary_sensor.doors_grg', 'on') %} #ffffff {% else %} var(--primary-text-color) {% endif %};
-                          color: #b02e25;
-                        }
-                card_mod:
-                  style: |
-                    .chip-container {
-                      flex-flow: column wrap-reverse !important;
-                      display: flex !important;
-                      --chip-spacing: 8px;
-                      margin: 12px;
-                    }
-                    .: |
-                    .container {
-                      align: end;
-                    }
-            card_mod:
-              style: |
-                ha-card {
-                  background:
-                  {% set temp = states('sensor.garage_temperature') | float %}
-                    {% if temp < 13 %}
-                      rgba(172, 156, 175, 0.8)
-                    {% elif temp < 16 %}          
-                      rgba(215, 196, 219, 0.8)
-                    {% elif temp < 19 %}
-                      rgba(163, 217, 245, 0.8)
-                    {% elif temp < 22 %}
-                      rgba(205, 227, 219, 0.8)
-                    {% elif temp < 24 %}
-                      rgba(255, 229, 153, 0.8)
-                    {% elif temp < 27 %}
-                      rgba(247, 190, 129, 0.8)
-                    {% else %}
-                      rgba(224, 102, 102, 0.8)
-                    {% endif %};        
-                  max-width: 100%;
-                  min-width: 50%;
-                  height: 186px;
-                }
-          - type: custom:stack-in-card
-            mode: horizontal
-            cards:
-              - type: vertical-stack
-                cards:
-                  - type: custom:decluttering-card
-                    template: room_summary_card
-                    variables:
-                      - room_name: Living
-                      - temperature_sensor: sensor.living_room_temperature
-                      - humidity_sensor: sensor.living_area_humidity
-                      - navigation_path: /family-foyer/living-area
-                  - type: custom:decluttering-card
-                    template: big_icon_toggle_card
-                    variables:
-                      - entity: light.lights_sofa
-                      - icon: mdi:sofa
-              - type: custom:mushroom-chips-card
-                chips:
-                  - type: template
-                    entity: climate.living_room
-                    tap_action:
-                      action: toggle
-                    icon: |
-                      {% if is_state(entity, 'heat_cool') %}
-                        mdi:heat-pump
-                      {% else %}
-                        mdi:heat-pump-outline
-                      {% endif %}
-                    card_mod:
-                      style: |
-                        ha-card {
-                          --chip-background: 
-                            {% if is_state('climate.living_room', 'heat_cool') and is_state('climate.heat_pump', 'cool') %} #b5e0f7 
-                            {% elif is_state('climate.living_room', 'heat_cool') and is_state('climate.heat_pump', 'heat') %} #fa6f66
-                            {% elif is_state('climate.living_room', 'heat_cool') and is_state('climate.heat_pump', 'fan_only') %} #DEDEDE
-                            {% elif is_state('climate.living_room', 'heat_cool') and is_state('climate.heat_pump', 'off') %} #FFEA00
-                            {% else %} #353535 
-                            {% endif %};
-                          --color: {% if is_state('climate.living_room', 'heat_cool') %} var(--primary-text-color){% else %} #dbdbdb {% endif %};
-                          justify-content: center;
-                          height: 35px !important;
-                          width: 35px !important;
-                          border: 0 !important;
-                          box-shadow: none !important;
-                          border-radius: 22px !important;
-                        }
-                  - type: template
-                    entity: light.lights_sofa
-                    tap_action:
-                      action: toggle
-                    icon: mdi:light-recessed
-                    card_mod:
-                      style: |
-                        ha-card {
-                          --chip-background: {% if is_state('light.lights_sofa', 'on') %} #D3C890 {% else %} #353535 {% endif %};
-                          --color: {% if is_state('light.lights_sofa', 'on') %} #5b5326 {% else %} #dbdbdb {% endif %};
-                          justify-content: center;
-                          height: 35px !important;
-                          width: 35px !important;
-                          border: 0 !important;
-                          box-shadow: none !important;
-                          border-radius: 22px !important;
-                        }
-                  - type: template
-                    entity: binary_sensor.doors_la
-                    tap_action:
-                      action: navigate
-                      navigation_path: /family-foyer/living-area
-                    icon: |
-                      {% if is_state(entity, 'on') %}
-                        mdi:door-sliding-open
-                      {% else %}
-                        mdi:door-sliding
-                      {% endif %}          
-                    card_mod:
-                      style: |
-                        ha-card {
-                          --chip-background: {% if is_state('binary_sensor.doors_la', 'on') %} #bc000a {% else %} #353535 {% endif %};
-                          --color: {% if is_state('binary_sensor.doors_la', 'on') %} #ffffff {% else %} #dbdbdb {% endif %};
-                          justify-content: center;
-                          height: 35px !important;
-                          width: 35px !important;
-                          border: 0 !important;
-                          box-shadow: none !important;
-                          border-radius: 22px !important;
-                        }
-                        ha-card:after {
-                          content: "{{ '' if (expand(states.binary_sensor.doors_la) | selectattr('state', 'eq', 'on') | list | count) == 0 else expand(states.binary_sensor.doors_la) | selectattr('state', 'eq', 'on') | list | count }}";
-                          position: absolute;
-                          top: -10%;
-                          right: -10%;
-                          display:  {% if is_state('binary_sensor.doors_la', 'on') %} flex {% else %} none {% endif %};
-                          justify-content: center;
-                          align-items: center;
-                          width: 14px;
-                          height: 14px;
-                          font-size: 9px;
-                          font-weight: 700;
-                          border-radius: 50%;
-                          background: {% if is_state('binary_sensor.doors_la', 'on') %} #ffffff {% else %} var(--primary-text-color) {% endif %};
-                          color: #b02e25;
-                        }
-                card_mod:
-                  style: |
-                    .chip-container {
-                      flex-flow: column wrap-reverse !important;
-                      display: flex !important;
-                      --chip-spacing: 8px;
-                      margin: 12px;
-                    }
-                    .: |
-                    .container {
-                      align: end;
-                    }
-            card_mod:
-              style: |
-                ha-card {
-                  background:
-                  {% set temp = states('sensor.living_room_temperature') | float %}
-                    {% if temp < 13 %}
-                      rgba(172, 156, 175, 0.8)
-                    {% elif temp < 16 %}          
-                      rgba(215, 196, 219, 0.8)
-                    {% elif temp < 19 %}
-                      rgba(163, 217, 245, 0.8)
-                    {% elif temp < 22 %}
-                      rgba(205, 227, 219, 0.8)
-                    {% elif temp < 24 %}
-                      rgba(255, 229, 153, 0.8)
-                    {% elif temp < 27 %}
-                      rgba(247, 190, 129, 0.8)
-                    {% else %}
-                      rgba(224, 102, 102, 0.8)
-                    {% endif %};        
-                  max-width: 100%;
-                  min-width: 50%;
-                  height: 186px;
-                }
-        view_layout:
-          grid-area: left3
-      - type: vertical-stack
-        cards:
-          - type: custom:advanced-camera-card
-            cameras:
-              - camera_entity: camera.driveway_low_resolution_channel
-            card_mod:
-              style: |
-                ha-card {
-                  height: 150px; /* set to whatever height you want */
-                  overflow: hidden;
-                }
-          - type: custom:mushroom-chips-card
-            alignment: start
-            chips:
-              - type: template
-                entity: switch.driveway_lights
-                icon: mdi:outdoor-lamp
-                tap_action:
-                  action: toggle
-                content: Driveway Light
-                card_mod:
-                  style:
-                    .: |
-                      ha-card {
-                        --text-color: {{ 'var(--primary-background-color)' if is_state('switch.driveway_lights', 'on') else 'none' }};
-                        --color: {{ 'var(--md-sys-color-on-primary)' if is_state('switch.driveway_lights', 'on') else 'none' }};
-                        --chip-background: {{ 'var(--md-sys-color-primary)' if is_state('switch.driveway_lights', 'on') else 'color-mix(in srgb, var(--md-sys-color-surface-variant) 40%, transparent)' }};
-                      }
-              - type: template
-                entity: switch.porch_lights
-                icon: mdi:string-lights
-                tap_action:
-                  action: toggle
-                content: Porch Light
-                card_mod:
-                  style:
-                    .: |
-                      ha-card {
-                        --text-color: {{ 'var(--primary-background-color)' if is_state('switch.porch_lights', 'on') else 'none' }};
-                        --color: {{ 'var(--md-sys-color-on-primary)' if is_state('switch.porch_lights', 'on') else 'none' }};
-                        --chip-background: {{ 'var(--md-sys-color-primary)' if is_state('switch.porch_lights', 'on') else 'color-mix(in srgb, var(--md-sys-color-surface-variant) 40%, transparent)' }};
-                      }
-        view_layout:
-          grid-area: left5
-      - type: vertical-stack
-        cards:
-          - type: custom:advanced-camera-card
-            cameras:
-              - camera_entity: camera.baby_cam_medium_resolution_channel
-            card_mod:
-              style: |
-                ha-card {
-                  height: 150px; /* set to whatever height you want */
-                  overflow: hidden;
-                }
-          - type: custom:mushroom-chips-card
-            alignment: start
-            chips:
-              - type: template
-                entity: switch.master_bedroom_dresser_light_switch
-                icon: mdi:lamp
-                tap_action:
-                  action: toggle
-                card_mod:
-                  style:
-                    .: |
-                      ha-card {
-                        --text-color: {{ 'var(--primary-background-color)' if is_state('switch.master_bedroom_dresser_light_switch', 'on') else 'none' }};
-                        --color: {{ 'var(--md-sys-color-on-primary)' if is_state('switch.master_bedroom_dresser_light_switch', 'on') else 'none' }};
-                        --chip-background: {{ 'var(--md-sys-color-primary)' if is_state('switch.master_bedroom_dresser_light_switch', 'on') else 'color-mix(in srgb, var(--md-sys-color-surface-variant) 40%, transparent)' }};
-                      }  
-                content: Dresser Light
-        view_layout:
-          grid-area: left6
-      - type: vertical-stack
-        cards:
-          - type: custom:advanced-camera-card
-            cameras:
-              - camera_entity: camera.garage_low_resolution_channel
-            card_mod:
-              style: |
-                ha-card {
-                  height: 150px; /* set to whatever height you want */
-                  overflow: hidden;
-                }
-          - type: custom:mushroom-chips-card
-            alignment: start
-            chips:
-              - type: template
-                entity: switch.light_switch_grg
-                icon: mdi:light-recessed
-                tap_action:
-                  action: toggle
-                content: Garage Light
-                card_mod:
-                  style:
-                    .: |
-                      ha-card {
-                        --text-color: {{ 'var(--primary-background-color)' if is_state('switch.light_switch_grg', 'on') else 'none' }};
-                        --color: {{ 'var(--md-sys-color-on-primary)' if is_state('switch.light_switch_grg', 'on') else 'none' }};
-                        --chip-background: {{ 'var(--md-sys-color-primary)' if is_state('switch.light_switch_grg', 'on') else 'color-mix(in srgb, var(--md-sys-color-surface-variant) 40%, transparent)' }};
-                      }   
-              - type: template
-                entity: switch.rear_light_switch_grg
-                icon: mdi:outdoor-lamp
-                tap_action:
-                  action: toggle
-                content: Rear Garage Light
-                card_mod:
-                  style:
-                    .: |
-                      ha-card {
-                        --text-color: {{ 'var(--primary-background-color)' if is_state('switch.rear_light_switch_grg', 'on') else 'none' }};
-                        --color: {{ 'var(--md-sys-color-on-primary)' if is_state('switch.rear_light_switch_grg', 'on') else 'none' }};
-                        --chip-background: {{ 'var(--md-sys-color-primary)' if is_state('switch.rear_light_switch_grg', 'on') else 'color-mix(in srgb, var(--md-sys-color-surface-variant) 40%, transparent)' }};
-                      }
-        view_layout:
-          grid-area: middle4
-      - type: vertical-stack
-        cards:
-          - type: custom:advanced-camera-card
-            cameras:
-              - camera_entity: camera.deck_medium_resolution_channel
-            card_mod:
-              style: |
-                ha-card {
-                  height: 150px; /* set to whatever height you want */
-                  overflow: hidden;
-                }
-          - type: custom:mushroom-chips-card
-            alignment: start
-            chips:
-              - type: template
-                entity: switch.patio_main_switch_la
-                icon: mdi:light-recessed
-                tap_action:
-                  action: toggle
-                content: Main Patio Light
-                card_mod:
-                  style:
-                    .: |
-                      ha-card {
-                        --text-color: {{ 'var(--primary-background-color)' if is_state('switch.patio_main_switch_la', 'on') else 'none' }};
-                        --color: {{ 'var(--md-sys-color-on-primary)' if is_state('switch.patio_main_switch_la', 'on') else 'none' }};
-                        --chip-background: {{ 'var(--md-sys-color-primary)' if is_state('switch.patio_main_switch_la', 'on') else 'color-mix(in srgb, var(--md-sys-color-surface-variant) 40%, transparent)' }};
-                      }
-        view_layout:
-          grid-area: right3
-      - type: custom:mushroom-title-card
-        title: Driveway
-        title_tap_action:
-          action: navigate
-          navigation_path: /family-foyer/camera
-        card_mod:
-          style: |
-            ha-card {
-              --title-font-size: 20px !important;
-              --layout-padding: 0px;
-            }  
-        view_layout:
-          grid-area: title5
-      - type: custom:mushroom-title-card
-        title: BabyCam
-        title_tap_action:
-          action: navigate
-          navigation_path: /family-foyer/camera
-        view_layout:
-          grid-area: title6
-        card_mod:
-          style: |
-            ha-card {
-              --title-font-size: 20px !important;
-            }  
-      - type: custom:mushroom-title-card
-        title: Garage
-        title_tap_action:
-          action: navigate
-          navigation_path: /family-foyer/camera
-        card_mod:
-          style: |
-            ha-card {
-              --title-font-size: 20px !important;
-            }  
-        view_layout:
-          grid-area: title7
-      - type: custom:mushroom-title-card
-        title: Backyard
-        title_tap_action:
-          action: navigate
-          navigation_path: /family-foyer/camera
-        card_mod:
-          style: |
-            ha-card {
-              --title-font-size: 20px !important;
-            }  
-        view_layout:
-          grid-area: title8
-      - type: horizontal-stack
-        cards:
-          - type: custom:stack-in-card
-            mode: horizontal
-            cards:
-              - type: vertical-stack
-                cards:
-                  - type: custom:decluttering-card
-                    template: room_summary_card
-                    variables:
                       - room_name: Single
                       - temperature_sensor: sensor.single_guest_room_temperature
                       - humidity_sensor: sensor.single_guest_room_humidity
@@ -2013,6 +1713,203 @@ views:
                 }
         view_layout:
           grid-area: middle3
+      - type: vertical-stack
+        cards:
+          - type: custom:advanced-camera-card
+            cameras:
+              - camera_entity: camera.driveway_low_resolution_channel
+            card_mod:
+              style: |
+                ha-card {
+                  height: 150px; /* set to whatever height you want */
+                  overflow: hidden;
+                }
+          - type: custom:mushroom-chips-card
+            alignment: start
+            chips:
+              - type: template
+                entity: switch.driveway_lights
+                icon: mdi:outdoor-lamp
+                tap_action:
+                  action: toggle
+                content: Driveway Light
+                card_mod:
+                  style:
+                    .: |
+                      ha-card {
+                        --text-color: {{ 'var(--primary-background-color)' if is_state('switch.driveway_lights', 'on') else 'none' }};
+                        --color: {{ 'var(--md-sys-color-on-primary)' if is_state('switch.driveway_lights', 'on') else 'none' }};
+                        --chip-background: {{ 'var(--md-sys-color-primary)' if is_state('switch.driveway_lights', 'on') else 'color-mix(in srgb, var(--md-sys-color-surface-variant) 40%, transparent)' }};
+                      }
+              - type: template
+                entity: switch.porch_lights
+                icon: mdi:string-lights
+                tap_action:
+                  action: toggle
+                content: Porch Light
+                card_mod:
+                  style:
+                    .: |
+                      ha-card {
+                        --text-color: {{ 'var(--primary-background-color)' if is_state('switch.porch_lights', 'on') else 'none' }};
+                        --color: {{ 'var(--md-sys-color-on-primary)' if is_state('switch.porch_lights', 'on') else 'none' }};
+                        --chip-background: {{ 'var(--md-sys-color-primary)' if is_state('switch.porch_lights', 'on') else 'color-mix(in srgb, var(--md-sys-color-surface-variant) 40%, transparent)' }};
+                      }
+        view_layout:
+          grid-area: left5
+      - type: vertical-stack
+        cards:
+          - type: custom:advanced-camera-card
+            cameras:
+              - camera_entity: camera.baby_cam_medium_resolution_channel
+            card_mod:
+              style: |
+                ha-card {
+                  height: 150px; /* set to whatever height you want */
+                  overflow: hidden;
+                }
+          - type: custom:mushroom-chips-card
+            alignment: start
+            chips:
+              - type: template
+                entity: switch.master_bedroom_dresser_light_switch
+                icon: mdi:lamp
+                tap_action:
+                  action: toggle
+                card_mod:
+                  style:
+                    .: |
+                      ha-card {
+                        --text-color: {{ 'var(--primary-background-color)' if is_state('switch.master_bedroom_dresser_light_switch', 'on') else 'none' }};
+                        --color: {{ 'var(--md-sys-color-on-primary)' if is_state('switch.master_bedroom_dresser_light_switch', 'on') else 'none' }};
+                        --chip-background: {{ 'var(--md-sys-color-primary)' if is_state('switch.master_bedroom_dresser_light_switch', 'on') else 'color-mix(in srgb, var(--md-sys-color-surface-variant) 40%, transparent)' }};
+                      }  
+                content: Dresser Light
+        view_layout:
+          grid-area: left6
+      - type: vertical-stack
+        cards:
+          - type: custom:advanced-camera-card
+            cameras:
+              - camera_entity: camera.garage_low_resolution_channel
+            card_mod:
+              style: |
+                ha-card {
+                  height: 150px; /* set to whatever height you want */
+                  overflow: hidden;
+                }
+          - type: custom:mushroom-chips-card
+            alignment: start
+            chips:
+              - type: template
+                entity: switch.light_switch_grg
+                icon: mdi:light-recessed
+                tap_action:
+                  action: toggle
+                content: Garage Light
+                card_mod:
+                  style:
+                    .: |
+                      ha-card {
+                        --text-color: {{ 'var(--primary-background-color)' if is_state('switch.light_switch_grg', 'on') else 'none' }};
+                        --color: {{ 'var(--md-sys-color-on-primary)' if is_state('switch.light_switch_grg', 'on') else 'none' }};
+                        --chip-background: {{ 'var(--md-sys-color-primary)' if is_state('switch.light_switch_grg', 'on') else 'color-mix(in srgb, var(--md-sys-color-surface-variant) 40%, transparent)' }};
+                      }   
+              - type: template
+                entity: switch.rear_light_switch_grg
+                icon: mdi:outdoor-lamp
+                tap_action:
+                  action: toggle
+                content: Rear Garage Light
+                card_mod:
+                  style:
+                    .: |
+                      ha-card {
+                        --text-color: {{ 'var(--primary-background-color)' if is_state('switch.rear_light_switch_grg', 'on') else 'none' }};
+                        --color: {{ 'var(--md-sys-color-on-primary)' if is_state('switch.rear_light_switch_grg', 'on') else 'none' }};
+                        --chip-background: {{ 'var(--md-sys-color-primary)' if is_state('switch.rear_light_switch_grg', 'on') else 'color-mix(in srgb, var(--md-sys-color-surface-variant) 40%, transparent)' }};
+                      }
+        view_layout:
+          grid-area: middle4
+      - type: vertical-stack
+        cards:
+          - type: custom:advanced-camera-card
+            cameras:
+              - camera_entity: camera.backyard_medium_resolution_channel
+            card_mod:
+              style: |
+                ha-card {
+                  height: 150px; /* set to whatever height you want */
+                  overflow: hidden;
+                }
+          - type: custom:mushroom-chips-card
+            alignment: start
+            chips:
+              - type: template
+                entity: switch.patio_main_switch_la
+                icon: mdi:light-recessed
+                tap_action:
+                  action: toggle
+                content: Main Patio Light
+                card_mod:
+                  style:
+                    .: |
+                      ha-card {
+                        --text-color: {{ 'var(--primary-background-color)' if is_state('switch.patio_main_switch_la', 'on') else 'none' }};
+                        --color: {{ 'var(--md-sys-color-on-primary)' if is_state('switch.patio_main_switch_la', 'on') else 'none' }};
+                        --chip-background: {{ 'var(--md-sys-color-primary)' if is_state('switch.patio_main_switch_la', 'on') else 'color-mix(in srgb, var(--md-sys-color-surface-variant) 40%, transparent)' }};
+                      }
+        view_layout:
+          grid-area: right3
+      - type: custom:mushroom-title-card
+        title: Driveway
+        title_tap_action:
+          action: navigate
+          navigation_path: /family-foyer/camera
+        card_mod:
+          style: |
+            ha-card {
+              --title-font-size: 20px !important;
+              --layout-padding: 0px;
+            }  
+        view_layout:
+          grid-area: title5
+      - type: custom:mushroom-title-card
+        title: BabyCam
+        title_tap_action:
+          action: navigate
+          navigation_path: /family-foyer/camera
+        view_layout:
+          grid-area: title6
+        card_mod:
+          style: |
+            ha-card {
+              --title-font-size: 20px !important;
+            }  
+      - type: custom:mushroom-title-card
+        title: Garage
+        title_tap_action:
+          action: navigate
+          navigation_path: /family-foyer/camera
+        card_mod:
+          style: |
+            ha-card {
+              --title-font-size: 20px !important;
+            }  
+        view_layout:
+          grid-area: title7
+      - type: custom:mushroom-title-card
+        title: Backyard
+        title_tap_action:
+          action: navigate
+          navigation_path: /family-foyer/camera
+        card_mod:
+          style: |
+            ha-card {
+              --title-font-size: 20px !important;
+            }  
+        view_layout:
+          grid-area: title8
     icon: mdi:home-outline
     path: overview
     background:
@@ -2104,7 +2001,7 @@ views:
                       type: template
                       entity: sensor.soil_sensor_corner_moisture
                       icon: mdi:water-percent
-                      content: '{{ states(''sensor.soil_sensor_corner_moisture'') }}%'
+                      content: "{{ states('sensor.soil_sensor_corner_moisture') }}%"
                       icon_color: >
                         {% set moisture =
                         states('sensor.soil_sensor_corner_moisture') | int(0) %}
@@ -2121,7 +2018,7 @@ views:
                     conditions:
                       - condition: state
                         entity: sensor.house_maintenance_chip_card
-                        state: 'true'
+                        state: "true"
                     chip:
                       type: template
                       entity: sensor.house_maintenance_chip_card
@@ -2149,7 +2046,7 @@ views:
                     conditions:
                       - condition: state
                         entity: binary_sensor.door_sensor_grg_contact
-                        state: 'on'
+                        state: "on"
                     chip:
                       type: template
                       entity: binary_sensor.door_sensor_grg_contact
@@ -2166,7 +2063,7 @@ views:
                     conditions:
                       - condition: state
                         entity: binary_sensor.all_doors
-                        state: 'on'
+                        state: "on"
                     chip:
                       type: template
                       entity: binary_sensor.all_doors
@@ -2219,7 +2116,7 @@ views:
                       tap_action:
                         action: more-info
                       icon: mdi:tumble-dryer
-                      icon_color: '#880808'
+                      icon_color: "#880808"
                       content: Dryer Running
                   - type: conditional
                     conditions:
@@ -2230,7 +2127,7 @@ views:
                             state: playing
                           - condition: state
                             entity: media_player.all_speakers
-                            state: 'on'
+                            state: "on"
                     chip:
                       type: template
                       entity: media_player.all_speakers
@@ -2248,10 +2145,10 @@ views:
                     conditions:
                       - condition: state
                         entity: input_boolean.rubbish
-                        state: 'on'
+                        state: "on"
                       - condition: state
                         entity: input_boolean.recycle
-                        state: 'on'
+                        state: "on"
                 card:
                   type: conditional
                   conditions:
@@ -2259,10 +2156,10 @@ views:
                       conditions:
                         - condition: state
                           entity: input_boolean.rubbish
-                          state: 'on'
+                          state: "on"
                         - condition: state
                           entity: input_boolean.recycle
-                          state: 'on'
+                          state: "on"
                   card:
                     type: vertical-stack
                     cards:
@@ -2313,7 +2210,7 @@ views:
                         conditions:
                           - condition: state
                             entity: binary_sensor.show_wash_cuddly_timer
-                            state: 'on'
+                            state: "on"
                           - condition: state
                             entity: timer.wash_cuddly
                             state: idle
@@ -2325,7 +2222,7 @@ views:
                       bar_width: 60%
                       mushroom:
                         layout: vertical
-                        color: '#f385bc'
+                        color: "#f385bc"
                   - type: conditional
                     conditions:
                       - condition: state
@@ -2339,7 +2236,7 @@ views:
                       bar_width: 60%
                       mushroom:
                         layout: vertical
-                        color: '#f3c843'
+                        color: "#f3c843"
                   - type: conditional
                     conditions:
                       - condition: state
@@ -2367,7 +2264,7 @@ views:
                       bar_width: 60%
                       mushroom:
                         layout: vertical
-                        color: '#b5e0f7'
+                        color: "#b5e0f7"
                   - type: conditional
                     conditions:
                       - condition: state
@@ -2381,7 +2278,7 @@ views:
                       bar_width: 60%
                       mushroom:
                         layout: vertical
-                        color: '#D70040'
+                        color: "#D70040"
                   - type: conditional
                     conditions:
                       - condition: state
@@ -2395,7 +2292,7 @@ views:
                       bar_width: 60%
                       mushroom:
                         layout: vertical
-                        color: '#A020F0'
+                        color: "#A020F0"
                   - type: conditional
                     conditions:
                       - condition: state
@@ -2409,14 +2306,14 @@ views:
                       bar_width: 60%
                       mushroom:
                         layout: vertical
-                        color: '#4CBB17'
+                        color: "#4CBB17"
           - type: vertical-stack
             cards:
               - type: conditional
                 conditions:
                   - condition: state
                     entity: light.all_lights
-                    state: 'on'
+                    state: "on"
                 card:
                   type: custom:decluttering-card
                   template: mushroom_title_card
@@ -2432,7 +2329,7 @@ views:
                   include:
                     - group: light.all_lights
                       entity_id: light.lights_*
-                      state: 'on'
+                      state: "on"
                       options:
                         type: vertical-stack
                         cards:
@@ -2444,8 +2341,8 @@ views:
                             variables:
                               - entity: this.entity_id
                     - group: light.all_lights
-                      entity_id: '*led*'
-                      state: 'on'
+                      entity_id: "*led*"
+                      state: "on"
                       options:
                         type: vertical-stack
                         cards:
@@ -2466,7 +2363,7 @@ views:
                 conditions:
                   - condition: state
                     entity: switch.all_light_switches
-                    state: 'on'
+                    state: "on"
                 card:
                   type: custom:decluttering-card
                   template: mushroom_title_card
@@ -2481,8 +2378,8 @@ views:
                 filter:
                   include:
                     - group: switch.all_light_switches
-                      entity_id: '*switch*'
-                      state: 'on'
+                      entity_id: "*switch*"
+                      state: "on"
                       options:
                         type: custom:button-card
                         entity: this.entity_id
@@ -2696,7 +2593,7 @@ views:
                         curve: smooth
                         yaxis_id: temp
                         stroke_width: 2
-                        color: '#E53935'
+                        color: "#E53935"
                         data_generator: |
                           return entity.attributes.forecasts.map(f => {
                             return {
@@ -2777,7 +2674,7 @@ views:
                         type: line
                         curve: smooth
                         yaxis_id: speed
-                        color: '#0288D1'
+                        color: "#0288D1"
                         stroke_width: 2
                         data_generator: |
                           return entity.attributes.forecasts.map(f => {
@@ -2790,7 +2687,7 @@ views:
                         type: line
                         curve: smooth
                         yaxis_id: direction
-                        color: '#8E24AA'
+                        color: "#8E24AA"
                         stroke_width: 1
                         data_generator: |
                           return entity.attributes.forecasts.map(f => {
@@ -2903,156 +2800,14 @@ views:
                         }
               - type: vertical-stack
                 cards:
-                  - type: custom:webrtc-camera
-                    streams:
-                      - entity: camera.left_driveway_camera_fluent
-                        mode: webrtc
-                        muted: true
-                  - type: custom:mushroom-chips-card
-                    alignment: start
-                    chips:
-                      - type: template
-                        entity: switch.light_switch_drw
-                        icon: mdi:light-recessed
-                        tap_action:
-                          action: toggle
-                        content: Driveway Light
-                        card_mod:
-                          style:
-                            .: |
-                              ha-card {
-                                --text-color: {{ 'var(--primary-background-color)' if is_state('switch.light_switch_drw', 'on') else 'none' }};
-                                --color: {{ 'var(--md-sys-color-on-primary)' if is_state('switch.light_switch_drw', 'on') else 'none' }};
-                                --chip-background: {{ 'var(--md-sys-color-primary)' if is_state('switch.light_switch_drw', 'on') else 'color-mix(in srgb, var(--md-sys-color-surface-variant) 40%, transparent)' }};
-                              }
-                      - type: template
-                        entity: switch.porch_light_drw
-                        icon: mdi:outdoor-lamp
-                        tap_action:
-                          action: toggle
-                        content: Porch Light
-                        card_mod:
-                          style:
-                            .: |
-                              ha-card {
-                                --text-color: {{ 'var(--primary-background-color)' if is_state('switch.porch_light_drw', 'on') else 'none' }};
-                                --color: {{ 'var(--md-sys-color-on-primary)' if is_state('switch.porch_light_drw', 'on') else 'none' }};
-                                --chip-background: {{ 'var(--md-sys-color-primary)' if is_state('switch.porch_light_drw', 'on') else 'color-mix(in srgb, var(--md-sys-color-surface-variant) 40%, transparent)' }};
-                              }
-              - type: custom:button-card
-                show_name: false
-                show_icon: false
-                tap_action:
-                  action: none
-                styles:
-                  card:
-                    - background: none
-                    - box-shadow: none
-                    - height: 50px
-              - type: horizontal-stack
-                cards:
-                  - type: custom:decluttering-card
-                    template: mushroom_title_card
-                    variables:
-                      - title: Left Walkway
-                  - type: custom:mushroom-chips-card
-                    chips:
-                      - type: template
-                        entity: automation.left_walkway_camera_person_notification
-                        icon: >
-                          {{ 'mdi:motion-sensor' if
-                          is_state('automation.left_walkway_camera_person_notification',
-                          'on') else 'mdi:motion-sensor-off' }}
-                        tap_action:
-                          action: toggle
-                    alignment: end
-                    card_mod:
-                      style: |
-                        ha-card {
-                          margin-top: 1.6em
-                        }
-              - type: vertical-stack
-                cards:
                   - type: custom:advanced-camera-card
                     cameras:
-                      - camera_entity: camera.left_walkway_camera_fluent
+                      - camera_entity: camera.driveway_medium_resolution_channel
                   - type: custom:mushroom-chips-card
                     alignment: start
                     chips:
                       - type: template
-                        entity: switch.outdoor_light_switch_lr
-                        icon: mdi:washing-machine
-                        tap_action:
-                          action: toggle
-                        content: Outdoor Laundry Light
-                        card_mod:
-                          style:
-                            .: |
-                              ha-card {
-                                --text-color: {{ 'var(--primary-background-color)' if is_state('switch.outdoor_light_switch_lr', 'on') else 'none' }};
-                                --color: {{ 'var(--md-sys-color-on-primary)' if is_state('switch.outdoor_light_switch_lr', 'on') else 'none' }};
-                                --chip-background: {{ 'var(--md-sys-color-primary)' if is_state('switch.outdoor_light_switch_lr', 'on') else 'color-mix(in srgb, var(--md-sys-color-surface-variant) 40%, transparent)' }};
-                              }   
-                      - type: template
-                        entity: switch.rear_light_switch_grg
-                        icon: mdi:outdoor-lamp
-                        tap_action:
-                          action: toggle
-                        content: Rear Garage Light
-                        card_mod:
-                          style:
-                            .: |
-                              ha-card {
-                                --text-color: {{ 'var(--primary-background-color)' if is_state('switch.rear_light_switch_grg', 'on') else 'none' }};
-                                --color: {{ 'var(--md-sys-color-on-primary)' if is_state('switch.rear_light_switch_grg', 'on') else 'none' }};
-                                --chip-background: {{ 'var(--md-sys-color-primary)' if is_state('switch.rear_light_switch_grg', 'on') else 'color-mix(in srgb, var(--md-sys-color-surface-variant) 40%, transparent)' }};
-                              }
-      - type: grid
-        cards:
-          - type: vertical-stack
-            cards:
-              - type: horizontal-stack
-                cards:
-                  - type: custom:decluttering-card
-                    template: mushroom_title_card
-                    variables:
-                      - title: Driveway
-                  - type: custom:mushroom-chips-card
-                    chips:
-                      - type: template
-                        entity: automation.right_driveway_camera_vehicle_notification
-                        icon: >
-                          {{ 'mdi:car' if
-                          is_state('automation.right_driveway_camera_vehicle_notification',
-                          'on') else 'mdi:car-off' }}
-                        tap_action:
-                          action: toggle
-                      - type: template
-                        entity: automation.right_driveway_camera_person_notification
-                        icon: >
-                          {{ 'mdi:motion-sensor' if
-                          is_state('automation.right_driveway_camera_person_notification',
-                          'on') else 'mdi:motion-sensor-off' }}
-                        tap_action:
-                          action: toggle
-                    alignment: end
-                    card_mod:
-                      style: |
-                        ha-card {
-                          margin-top: 1.6em
-                        }
-              - type: vertical-stack
-                cards:
-                  - type: custom:webrtc-camera
-                    streams:
-                      - entity: camera.right_driveway_camera_fluent
-                        mode: webrtc
-                        muted: true
-                  - type: custom:mushroom-chips-card
-                    alignment: start
-                    chips:
-                      - type: template
-                        entity: switch.light_switch_drw
+                        entity: switch.driveway_lights
                         icon: mdi:light-recessed
                         tap_action:
                           action: toggle
@@ -3066,7 +2821,7 @@ views:
                                 --chip-background: {{ 'var(--md-sys-color-primary)' if is_state('switch.light_switch_drw', 'on') else 'color-mix(in srgb, var(--md-sys-color-surface-variant) 40%, transparent)' }};
                               }
                       - type: template
-                        entity: switch.porch_light_drw
+                        entity: switch.porch_lights
                         icon: mdi:outdoor-lamp
                         tap_action:
                           action: toggle
@@ -3098,11 +2853,11 @@ views:
                   - type: custom:mushroom-chips-card
                     chips:
                       - type: template
-                        entity: automation.right_backyard_camera_person_notification
+                        entity: binary_sensor.backyard_motion
                         icon: >
                           {{ 'mdi:motion-sensor' if
-                          is_state('automation.right_backyard_camera_person_notification',
-                          'on') else 'mdi:motion-sensor-off' }}
+                          is_state('binary_sensor.backyard_motion', 'on') else
+                          'mdi:motion-sensor-off' }}
                         tap_action:
                           action: toggle
                     alignment: end
@@ -3113,11 +2868,9 @@ views:
                         }
               - type: vertical-stack
                 cards:
-                  - type: custom:webrtc-camera
-                    streams:
-                      - entity: camera.right_backyard_camera_fluent
-                        mode: webrtc
-                        muted: true
+                  - type: custom:advanced-camera-card
+                    cameras:
+                      - camera_entity: camera.backyard_medium_resolution_channel
                   - type: custom:mushroom-chips-card
                     alignment: start
                     chips:
@@ -3238,7 +2991,7 @@ views:
                       - camera_entity: camera.garage_camera_fluent
                     dimensions:
                       aspect_ratio_mode: static
-                      height: '300'
+                      height: "300"
                   - type: custom:mushroom-chips-card
                     alignment: start
                     chips:
