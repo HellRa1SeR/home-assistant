@@ -1,0 +1,964 @@
+
+
+{%- for entity in states %}
+{%- set area = area_name(entity.entity_id) %}
+{{ entity.entity_id }}; {{ entity.name }}; {{ area if area != None else 'No Area' }}
+{%- endfor %}
+
+update.home_assistant_supervisor_update; Home Assistant Supervisor Update; No Area
+update.home_assistant_core_update; Home Assistant Core Update; No Area
+update.home_assistant_operating_system_update; Home Assistant Operating System Update; No Area
+update.terminal_ssh_update; Terminal & SSH Update; No Area
+update.studio_code_server_update; Studio Code Server Update; No Area
+update.file_editor_update; File editor Update; No Area
+update.z_wave_js_ui_update; Z-Wave JS UI Update; No Area
+update.home_assistant_google_drive_backup_update; Home Assistant Google Drive Backup Update; No Area
+conversation.home_assistant; Home Assistant; No Area
+event.backup_automatic_backup; Backup Automatic backup; No Area
+sensor.backup_backup_manager_state; Backup Backup Manager state; No Area
+sensor.backup_next_scheduled_automatic_backup; Backup Next scheduled automatic backup; No Area
+sensor.backup_last_successful_automatic_backup; Backup Last successful automatic backup; No Area
+sensor.backup_last_attempted_automatic_backup; Backup Last attempted automatic backup; No Area
+zone.home; Home; No Area
+person.siddharth; Siddharth; No Area
+person.kiosk; kiosk; No Area
+sun.sun; Sun; No Area
+sensor.sun_next_dawn; Sun Next dawn; No Area
+sensor.sun_next_dusk; Sun Next dusk; No Area
+sensor.sun_next_midnight; Sun Next midnight; No Area
+sensor.sun_next_noon; Sun Next noon; No Area
+sensor.sun_next_rising; Sun Next rising; No Area
+sensor.sun_next_setting; Sun Next setting; No Area
+sensor.date_time; Date & Time; No Area
+sensor.time; Time; No Area
+binary_sensor.hellra1ser_s_iphone_14_pro_max_focus; HellRa1SeR's iPhone 14 Pro Max Focus; No Area
+device_tracker.hellra1ser_s_iphone_14_pro_max; HellRa1SeR's iPhone 14 Pro Max; No Area
+notify.hellra1ser_s_iphone_14_pro_max; HellRa1SeR's iPhone 14 Pro Max; No Area
+sensor.hellra1ser_s_iphone_14_pro_max_battery_level; HellRa1SeR's iPhone 14 Pro Max Battery Level; No Area
+sensor.hellra1ser_s_iphone_14_pro_max_sim_2; HellRa1SeR's iPhone 14 Pro Max SIM 2; No Area
+sensor.hellra1ser_s_iphone_14_pro_max_ssid; HellRa1SeR's iPhone 14 Pro Max SSID; No Area
+sensor.hellra1ser_s_iphone_14_pro_max_storage; HellRa1SeR's iPhone 14 Pro Max Storage; No Area
+sensor.hellra1ser_s_iphone_14_pro_max_battery_state; HellRa1SeR's iPhone 14 Pro Max Battery State; No Area
+sensor.hellra1ser_s_iphone_14_pro_max_bssid; HellRa1SeR's iPhone 14 Pro Max BSSID; No Area
+sensor.hellra1ser_s_iphone_14_pro_max_connection_type; HellRa1SeR's iPhone 14 Pro Max Connection Type; No Area
+sensor.hellra1ser_s_iphone_14_pro_max_sim_1; HellRa1SeR's iPhone 14 Pro Max SIM 1; No Area
+sensor.hellra1ser_s_iphone_14_pro_max_geocoded_location; HellRa1SeR's iPhone 14 Pro Max Geocoded Location; No Area
+sensor.hellra1ser_s_iphone_14_pro_max_last_update_trigger; HellRa1SeR's iPhone 14 Pro Max Last Update Trigger; No Area
+sensor.hellra1ser_s_iphone_14_pro_max_app_version; HellRa1SeR's iPhone 14 Pro Max App Version; No Area
+sensor.hellra1ser_s_iphone_14_pro_max_location_permission; HellRa1SeR's iPhone 14 Pro Max Location permission; No Area
+sensor.hellra1ser_s_iphone_14_pro_max_audio_output; HellRa1SeR's iPhone 14 Pro Max Audio Output; No Area
+button.ceiling_fan_start_dimmer; Aaravs room ceiling fan Ceiling fan Start Dimmer; Aarav's room
+button.ceiling_fan_stop_actions; Aaravs room ceiling fan Ceiling fan Stop Actions; Aarav's room
+fan.master_ceiling_fan; Master Ceiling fan; Master Bedroom
+fan.ceiling_fan; Aaravs room ceiling fan; Aarav's room
+light.master_ceiling_fan; Master Ceiling fan; Master Bedroom
+light.ceiling_fan; Aaravs room ceiling fan; Aarav's room
+sensor.800_series_long_range_usb_controller_status; 800 Series Long Range USB Controller Status; Basement
+update.800_series_long_range_usb_controller_firmware; 800 Series Long Range USB Controller Firmware; Basement
+sensor.driveway_lights_node_status; Driveway lights Node status; Garage
+button.driveway_lights_ping; Driveway lights Ping; Garage
+sensor.driveway_lights_last_seen; Driveway lights Last seen; Garage
+switch.driveway_lights; Driveway lights; Garage
+event.driveway_lights_scene_001; Driveway lights Scene 001; Garage
+event.driveway_lights_scene_002; Driveway lights Scene 002; Garage
+number.driveway_lights_indicator_value; Driveway lights Indicator value; Garage
+button.driveway_lights_identify; Driveway lights Identify; Garage
+update.driveway_lights_firmware; Driveway lights Firmware; Garage
+sensor.living_room_siren_node_status; Living Room Siren Node status; Living Room
+button.living_room_siren_ping; Living Room Siren Ping; Living Room
+light.living_room_siren_basic; Living Room Siren Basic; Living Room
+binary_sensor.living_room_siren_siren_active; Living Room Siren Siren active; Living Room
+binary_sensor.living_room_siren_ac_mains_disconnected; Living Room Siren AC mains disconnected; Living Room
+binary_sensor.living_room_siren_ac_mains_re_connected; Living Room Siren AC mains re-connected; Living Room
+select.living_room_siren_default_tone; Living Room Siren Default tone; Living Room
+number.living_room_siren_default_volume; Living Room Siren Default volume; Living Room
+siren.living_room_siren_play_tone; Living Room Siren Play Tone; Living Room
+sensor.living_room_siren_battery_level; Living Room Siren Battery level; Living Room
+button.living_room_siren_identify; Living Room Siren Identify; Living Room
+update.living_room_siren_firmware; Living Room Siren Firmware; Living Room
+sensor.thermostat_node_status; Thermostat Node status; No Area
+button.thermostat_ping; Thermostat Ping; No Area
+sensor.thermostat_air_temperature; Thermostat Air temperature; No Area
+sensor.thermostat_humidity; Thermostat Humidity; No Area
+climate.thermostat; Thermostat; No Area
+fan.thermostat; Thermostat; No Area
+binary_sensor.thermostat_ac_mains_disconnected; Thermostat AC mains disconnected; No Area
+binary_sensor.thermostat_ac_mains_re_connected; Thermostat AC mains re-connected; No Area
+sensor.thermostat_battery_level; Thermostat Battery level; No Area
+button.thermostat_identify; Thermostat Identify; No Area
+update.thermostat_firmware; Thermostat Firmware; No Area
+switch.dreame_vacuum_pre_release; Dreame Vacuum Pre-release; No Area
+update.material_you_theme_a_fully_featured_implementation_of_material_design_3_update; Material You Theme - A Fully Featured Implementation of Material Design 3 Update; No Area
+update.auto_entities_update; auto-entities Update; No Area
+update.paper_buttons_row_update; Paper Buttons Row Update; No Area
+update.mushroom_update; Mushroom Update; No Area
+update.alarmo_card_update; Alarmo Card Update; No Area
+update.kiosk_mode_update; Kiosk Mode Update; No Area
+update.clock_weather_card_hui_icons_update; Clock Weather Card HUI Icons Update; No Area
+update.calendar_card_pro_update; Calendar Card Pro Update; No Area
+update.dreame_vacuum_update; Dreame Vacuum Update; No Area
+update.expander_card_update; expander-card Update; No Area
+update.mini_graph_card_update; mini-graph-card Update; No Area
+update.button_card_update; button-card Update; No Area
+update.advanced_camera_card_update; Advanced Camera Card Update; No Area
+update.material_you_utilities_material_design_3_color_theme_generation_and_component_modification_update; Material You Utilities - Material Design 3 Color Theme Generation and Component Modification Update; No Area
+update.decluttering_card_update; Decluttering Card Update; No Area
+update.simple_tabs_card_update; Simple Tabs Card Update; No Area
+update.stack_in_card_update; Stack In Card Update; No Area
+update.layout_card_update; layout-card Update; No Area
+update.bubble_card_update; Bubble Card Update; No Area
+update.hacs_update; HACS Update; No Area
+update.alarmo_update; Alarmo Update; No Area
+update.card_mod_update; card-mod Update; No Area
+update.apexcharts_card_update; apexcharts-card Update; No Area
+update.config_template_card_update; Config Template Card Update; No Area
+update.week_planner_card_update; Week planner card Update; No Area
+update.vertical_stack_in_card_update; Vertical Stack In Card Update; No Area
+update.webrtc_camera_update; WebRTC Camera Update; No Area
+update.watchman_update; Watchman Update; No Area
+update.horizontal_waterfall_history_card_update; Horizontal Waterfall History Card Update; No Area
+alarm_control_panel.alarmo; Alarmo; No Area
+sensor.klou_temperature; nws KLOU Temperature; No Area
+weather.klou; nws KLOU; No Area
+sensor.watchman_last_updated; Watchman Last Update; Basement
+sensor.watchman_missing_entities; Watchman Missing Entities; Basement
+sensor.watchman_missing_actions; Watchman Missing Actions; Basement
+sensor.watchman_status; Watchman Status; Basement
+sensor.watchman_parse_duration; Watchman Parse Duration; Basement
+sensor.watchman_last_parse; Watchman Last Parse; Basement
+sensor.watchman_processed_files; Watchman Processed Files; Basement
+sensor.watchman_ignored_files; Watchman Ignored Files; Basement
+text.watchman_ignored_labels_2; Ignored Labels; No Area
+button.watchman_create_report_file; Watchman Create Report File; Basement
+calendar.sid_and_smruti_s_calendar; Sid and Smruti's calendar; No Area
+alarm_control_panel.brahma_alarm_manager; Brahma Alarm Manager; Basement
+binary_sensor.g3_instant_is_dark; Baby Cam Is dark; Loft
+binary_sensor.driveway_is_dark; Driveway Is dark; Driveway
+binary_sensor.front_door_is_dark; Front door Is dark; Porch
+binary_sensor.garage_is_dark; Garage Is dark; Garage
+binary_sensor.ip_camera_ip_camera_is_dark; IP camera IP Camera Is dark; Master Bedroom
+binary_sensor.g3_flex_is_dark; Loft Is dark; Loft
+binary_sensor.g3_pro_is_dark; Basement Door Is dark; Basement
+binary_sensor.g3_flex_is_dark_2; Basement Wide Is dark; Basement
+binary_sensor.g4_instant_is_dark; G4 Instant Is dark; Deck
+binary_sensor.backyard_is_dark; Backyard Is dark; Basement
+binary_sensor.up_floodlight_is_dark; Driveway Floodlight Is dark; Driveway
+binary_sensor.up_floodlight_motion_detected; Driveway Floodlight Motion; Driveway
+binary_sensor.g3_instant_motion; Baby Cam Motion; Loft
+binary_sensor.baby_cam_person_detected; Baby Cam Person detected; Loft
+binary_sensor.baby_cam_vehicle_detected; Baby Cam Vehicle detected; Loft
+binary_sensor.baby_cam_animal_detected; Baby Cam Animal detected; Loft
+binary_sensor.baby_cam_smoke_alarm_detected; Baby Cam Smoke alarm detected; Loft
+binary_sensor.baby_cam_co_alarm_detected; Baby Cam CO alarm detected; Loft
+binary_sensor.baby_cam_siren_detected; Baby Cam Siren detected; Loft
+binary_sensor.baby_cam_baby_cry_detected; Baby Cam Baby cry detected; Loft
+binary_sensor.baby_cam_speaking_detected; Baby Cam Speaking detected; Loft
+binary_sensor.baby_cam_barking_detected; Baby Cam Barking detected; Loft
+binary_sensor.baby_cam_car_alarm_detected; Baby Cam Car alarm detected; Loft
+binary_sensor.baby_cam_car_horn_detected; Baby Cam Car horn detected; Loft
+binary_sensor.baby_cam_glass_break_detected; Baby Cam Glass break detected; Loft
+binary_sensor.driveway_motion; Driveway Motion; Driveway
+binary_sensor.driveway_person_detected; Driveway Person detected; Driveway
+binary_sensor.driveway_vehicle_detected; Driveway Vehicle detected; Driveway
+binary_sensor.driveway_animal_detected; Driveway Animal detected; Driveway
+binary_sensor.driveway_smoke_alarm_detected; Driveway Smoke alarm detected; Driveway
+binary_sensor.driveway_co_alarm_detected; Driveway CO alarm detected; Driveway
+binary_sensor.driveway_siren_detected; Driveway Siren detected; Driveway
+binary_sensor.driveway_baby_cry_detected; Driveway Baby cry detected; Driveway
+binary_sensor.driveway_speaking_detected; Driveway Speaking detected; Driveway
+binary_sensor.driveway_barking_detected; Driveway Barking detected; Driveway
+binary_sensor.driveway_car_alarm_detected; Driveway Car alarm detected; Driveway
+binary_sensor.driveway_car_horn_detected; Driveway Car horn detected; Driveway
+binary_sensor.driveway_glass_break_detected; Driveway Glass break detected; Driveway
+binary_sensor.front_door_doorbell; Front door Doorbell; Porch
+binary_sensor.front_door_motion; Front door Motion; Porch
+binary_sensor.front_door_person_detected; Front door Person detected; Porch
+binary_sensor.front_door_vehicle_detected; Front door Vehicle detected; Porch
+binary_sensor.front_door_animal_detected; Front door Animal detected; Porch
+binary_sensor.front_door_smoke_alarm_detected; Front door Smoke alarm detected; Porch
+binary_sensor.front_door_co_alarm_detected; Front door CO alarm detected; Porch
+binary_sensor.front_door_siren_detected; Front door Siren detected; Porch
+binary_sensor.front_door_baby_cry_detected; Front door Baby cry detected; Porch
+binary_sensor.front_door_speaking_detected; Front door Speaking detected; Porch
+binary_sensor.front_door_barking_detected; Front door Barking detected; Porch
+binary_sensor.front_door_car_alarm_detected; Front door Car alarm detected; Porch
+binary_sensor.front_door_car_horn_detected; Front door Car horn detected; Porch
+binary_sensor.front_door_glass_break_detected; Front door Glass break detected; Porch
+binary_sensor.garage_motion; Garage Motion; Garage
+binary_sensor.ip_camera_ip_camera_motion; IP camera IP Camera Motion; Master Bedroom
+binary_sensor.g3_flex_motion; Loft Motion; Loft
+binary_sensor.g3_pro_motion; Basement Door Motion; Basement
+binary_sensor.g3_flex_motion_2; Basement Wide Motion; Basement
+binary_sensor.g4_instant_motion; G4 Instant Motion; Deck
+binary_sensor.deck_person_detected; G4 Instant Person detected; Deck
+binary_sensor.deck_vehicle_detected; G4 Instant Vehicle detected; Deck
+binary_sensor.deck_animal_detected; G4 Instant Animal detected; Deck
+binary_sensor.deck_smoke_alarm_detected; G4 Instant Smoke alarm detected; Deck
+binary_sensor.deck_co_alarm_detected; G4 Instant CO alarm detected; Deck
+binary_sensor.deck_baby_cry_detected; G4 Instant Baby cry detected; Deck
+binary_sensor.deck_speaking_detected; G4 Instant Speaking detected; Deck
+binary_sensor.backyard_motion; Backyard Motion; Basement
+binary_sensor.backyard_person_detected; Backyard Person detected; Basement
+binary_sensor.backyard_vehicle_detected; Backyard Vehicle detected; Basement
+binary_sensor.backyard_animal_detected; Backyard Animal detected; Basement
+binary_sensor.backyard_smoke_alarm_detected; Backyard Smoke alarm detected; Basement
+binary_sensor.backyard_co_alarm_detected; Backyard CO alarm detected; Basement
+binary_sensor.backyard_baby_cry_detected; Backyard Baby cry detected; Basement
+binary_sensor.backyard_speaking_detected; Backyard Speaking detected; Basement
+binary_sensor.brahma_hdd_1_2; Brahma HDD 1; Basement
+binary_sensor.brahma_hdd_2; Brahma HDD 2; Basement
+binary_sensor.brahma_hdd_4; Brahma HDD 4; Basement
+button.second_floor_chime_play_chime; Second floor chime Play chime; Loft
+button.second_floor_chime_play_buzzer; Second floor chime Play buzzer; Loft
+camera.baby_cam_high_resolution_channel; Baby Cam High resolution channel; Loft
+camera.baby_cam_medium_resolution_channel; Baby Cam Medium resolution channel; Loft
+camera.driveway_high_resolution_channel; Driveway High resolution channel; Driveway
+camera.driveway_medium_resolution_channel; Driveway Medium resolution channel; Driveway
+camera.driveway_low_resolution_channel; Driveway Low resolution channel; Driveway
+camera.front_door_high_resolution_channel; Front door High resolution channel; Porch
+camera.front_door_low_resolution_channel; Front door Low resolution channel; Porch
+camera.front_door_package_camera; Front door Package Camera; Porch
+camera.garage_medium_resolution_channel; Garage Medium resolution channel; Garage
+camera.garage_low_resolution_channel; Garage Low resolution channel; Garage
+camera.g3_flex_medium_resolution_channel; Loft Medium resolution channel; Loft
+camera.basement_door_medium_resolution_channel; Basement Door Medium resolution channel; Basement
+camera.basement_wide_medium_resolution_channel; Basement Wide Medium resolution channel; Basement
+camera.basement_low_resolution_channel; Basement Wide Low resolution channel; Basement
+camera.deck_medium_resolution_channel; G4 Instant Medium resolution channel; Deck
+camera.backyard_medium_resolution_channel; Backyard Medium resolution channel; Basement
+camera.backyard_low_resolution_channel; Backyard Low resolution channel; Basement
+event.baby_cam_vehicle; Baby Cam Vehicle; Loft
+event.driveway_vehicle; Driveway Vehicle; Driveway
+event.front_door_doorbell; Front door Doorbell; Porch
+event.front_door_nfc; Front door NFC; Porch
+event.front_door_fingerprint; Front door Fingerprint; Porch
+event.front_door_vehicle; Front door Vehicle; Porch
+event.deck_vehicle; G4 Instant Vehicle; Deck
+event.backyard_vehicle; Backyard Vehicle; Basement
+light.up_floodlight; Driveway Floodlight; Driveway
+media_player.g3_instant_speaker; Baby Cam Speaker; Loft
+media_player.front_door_speaker; Front door Speaker; Porch
+media_player.deck_speaker; G4 Instant Speaker; Deck
+number.g3_instant_microphone_level; Baby Cam Microphone level; Loft
+number.baby_cam_system_sounds_volume; Baby Cam System sounds volume; Loft
+number.g3_instant_infrared_custom_lux_trigger; Baby Cam Infrared custom lux trigger; Loft
+number.driveway_microphone_level; Driveway Microphone level; Driveway
+number.driveway_zoom_level; Driveway Zoom level; Driveway
+number.driveway_infrared_custom_lux_trigger; Driveway Infrared custom lux trigger; Driveway
+number.front_door_microphone_level; Front door Microphone level; Porch
+number.front_door_system_sounds_volume; Front door System sounds volume; Porch
+number.front_door_doorbell_ring_volume; Front door Doorbell ring volume; Porch
+number.front_door_chime_duration; Front door Chime duration; Porch
+number.front_door_infrared_custom_lux_trigger; Front door Infrared custom lux trigger; Porch
+number.garage_wide_dynamic_range; Garage Wide dynamic range; Garage
+number.garage_microphone_level; Garage Microphone level; Garage
+number.garage_infrared_custom_lux_trigger; Garage Infrared custom lux trigger; Garage
+number.ip_camera_ip_camera_wide_dynamic_range; IP camera IP Camera Wide dynamic range; Master Bedroom
+number.bassinet_camera_microphone_level; IP camera IP Camera Microphone level; Master Bedroom
+number.g3_flex_microphone_level; Loft Microphone level; Loft
+number.g3_flex_infrared_custom_lux_trigger; Loft Infrared custom lux trigger; Loft
+number.g3_pro_microphone_level; Basement Door Microphone level; Basement
+number.g3_pro_zoom_level; Basement Door Zoom level; Basement
+number.g3_pro_infrared_custom_lux_trigger; Basement Door Infrared custom lux trigger; Basement
+number.g3_flex_microphone_level_2; Basement Wide Microphone level; Basement
+number.g3_flex_infrared_custom_lux_trigger_2; Basement Wide Infrared custom lux trigger; Basement
+number.deck_microphone_level; G4 Instant Microphone level; Deck
+number.g4_instant_system_sounds_volume; G4 Instant System sounds volume; Deck
+number.deck_infrared_custom_lux_trigger; G4 Instant Infrared custom lux trigger; Deck
+number.backyard_microphone_level; Backyard Microphone level; Basement
+number.backyard_infrared_custom_lux_trigger; Backyard Infrared custom lux trigger; Basement
+number.up_floodlight_motion_sensitivity; Driveway Floodlight Motion sensitivity; Driveway
+number.up_floodlight_auto_shutoff_duration; Driveway Floodlight Auto-shutoff duration; Driveway
+number.second_floor_chime_volume; Second floor chime Volume; Loft
+number.second_floor_chime_ring_volume_front_door; Second floor chime Ring volume (Front door); Loft
+select.g3_instant_recording_mode; Baby Cam Recording mode; Loft
+select.g3_instant_infrared_mode; Baby Cam Infrared mode; Loft
+select.g3_instant_hdr_mode; Baby Cam HDR mode; Loft
+select.driveway_recording_mode; Driveway Recording mode; Driveway
+select.driveway_infrared_mode; Driveway Infrared mode; Driveway
+select.driveway_hdr_mode; Driveway HDR mode; Driveway
+select.front_door_recording_mode; Front door Recording mode; Porch
+select.front_door_infrared_mode; Front door Infrared mode; Porch
+select.front_door_doorbell_text; Front door Doorbell text; Porch
+select.front_door_chime_type; Front door Chime type; Porch
+select.front_door_hdr_mode; Front door HDR mode; Porch
+select.garage_recording_mode; Garage Recording mode; Garage
+select.garage_infrared_mode; Garage Infrared mode; Garage
+select.ip_camera_ip_camera_recording_mode; IP camera IP Camera Recording mode; Master Bedroom
+select.g3_flex_recording_mode; Loft Recording mode; Loft
+select.g3_flex_infrared_mode; Loft Infrared mode; Loft
+select.g3_flex_hdr_mode; Loft HDR mode; Loft
+select.g3_pro_recording_mode; Basement Door Recording mode; Basement
+select.g3_pro_infrared_mode; Basement Door Infrared mode; Basement
+select.g3_pro_hdr_mode; Basement Door HDR mode; Basement
+select.g3_flex_recording_mode_2; Basement Wide Recording mode; Basement
+select.g3_flex_infrared_mode_2; Basement Wide Infrared mode; Basement
+select.g3_flex_hdr_mode_2; Basement Wide HDR mode; Basement
+select.g4_instant_recording_mode; G4 Instant Recording mode; Deck
+select.deck_infrared_mode; G4 Instant Infrared mode; Deck
+select.deck_hdr_mode; G4 Instant HDR mode; Deck
+select.backyard_recording_mode; Backyard Recording mode; Basement
+select.backyard_infrared_mode; Backyard Infrared mode; Basement
+select.backyard_hdr_mode; Backyard HDR mode; Basement
+select.up_floodlight_light_mode; Driveway Floodlight Light mode; Driveway
+select.up_floodlight_paired_camera; Driveway Floodlight Paired camera; Driveway
+select.ip_camera_ip_camera_ptz_patrol; IP camera IP Camera PTZ patrol; Master Bedroom
+sensor.g3_instant_storage_used; Baby Cam Storage used; Loft
+sensor.g3_instant_disk_write_rate; Baby Cam Disk write rate; Loft
+sensor.driveway_storage_used; Driveway Storage used; Driveway
+sensor.driveway_disk_write_rate; Driveway Disk write rate; Driveway
+sensor.front_door_storage_used; Front door Storage used; Porch
+sensor.front_door_disk_write_rate; Front door Disk write rate; Porch
+sensor.front_door_voltage; Front door Voltage; Porch
+sensor.garage_storage_used; Garage Storage used; Garage
+sensor.garage_disk_write_rate; Garage Disk write rate; Garage
+sensor.ip_camera_ip_camera_storage_used; IP camera IP Camera Storage used; Master Bedroom
+sensor.ip_camera_ip_camera_disk_write_rate; IP camera IP Camera Disk write rate; Master Bedroom
+sensor.g3_flex_storage_used; Loft Storage used; Loft
+sensor.g3_flex_disk_write_rate; Loft Disk write rate; Loft
+sensor.g3_pro_storage_used; Basement Door Storage used; Basement
+sensor.g3_pro_disk_write_rate; Basement Door Disk write rate; Basement
+sensor.g3_flex_storage_used_2; Basement Wide Storage used; Basement
+sensor.g3_flex_disk_write_rate_2; Basement Wide Disk write rate; Basement
+sensor.g4_instant_storage_used; G4 Instant Storage used; Deck
+sensor.g4_instant_disk_write_rate; G4 Instant Disk write rate; Deck
+sensor.backyard_storage_used; Backyard Storage used; Basement
+sensor.backyard_disk_write_rate; Backyard Disk write rate; Basement
+sensor.second_floor_chime_last_ring; Second floor chime Last ring; Loft
+sensor.brahma_uptime_2; Brahma Uptime; Basement
+sensor.brahma_storage_utilization_2; Brahma Storage utilization; Basement
+sensor.brahma_type_timelapse_video_2; Brahma Type: timelapse video; Basement
+sensor.brahma_type_continuous_video_2; Brahma Type: continuous video; Basement
+sensor.brahma_type_detections_video_2; Brahma Type: detections video; Basement
+sensor.brahma_resolution_hd_video_2; Brahma Resolution: HD video; Basement
+sensor.brahma_resolution_4k_video_2; Brahma Resolution: 4K video; Basement
+sensor.brahma_resolution_free_space_2; Brahma Resolution: free space; Basement
+sensor.brahma_recording_capacity_2; Brahma Recording capacity; Basement
+switch.g3_instant_status_light_on; Baby Cam Status light; Loft
+switch.g3_instant_system_sounds; Baby Cam System sounds; Loft
+switch.g3_instant_overlay_show_name; Baby Cam Overlay: show name; Loft
+switch.g3_instant_overlay_show_date; Baby Cam Overlay: show date; Loft
+switch.g3_instant_overlay_show_logo; Baby Cam Overlay: show logo; Loft
+switch.g3_instant_overlay_show_nerd_mode; Baby Cam Overlay: show nerd mode; Loft
+switch.g3_instant_detections_motion; Baby Cam Motion; Loft
+switch.baby_cam_detections_person; Baby Cam Person detection; Loft
+switch.baby_cam_detections_vehicle; Baby Cam Vehicle detection; Loft
+switch.baby_cam_detections_animal; Baby Cam Animal detection; Loft
+switch.baby_cam_detections_license_plate; Baby Cam License plate detection; Loft
+switch.baby_cam_detections_smoke; Baby Cam Smoke detection; Loft
+switch.baby_cam_detections_co_alarm; Baby Cam CO alarm detection; Loft
+switch.baby_cam_detections_siren; Baby Cam Siren detection; Loft
+switch.baby_cam_detections_baby_cry; Baby Cam Baby cry detection; Loft
+switch.baby_cam_detections_speaking; Baby Cam Speaking detection; Loft
+switch.baby_cam_none; Baby Cam Barking detection; Loft
+switch.baby_cam_detections_car_alarm; Baby Cam Car alarm detection; Loft
+switch.baby_cam_detections_car_horn; Baby Cam Car horn detection; Loft
+switch.baby_cam_detections_glass_break; Baby Cam Glass break detection; Loft
+switch.driveway_status_light_on; Driveway Status light; Driveway
+switch.driveway_high_fps; Driveway High FPS; Driveway
+switch.driveway_overlay_show_name; Driveway Overlay: show name; Driveway
+switch.driveway_overlay_show_date; Driveway Overlay: show date; Driveway
+switch.driveway_overlay_show_logo; Driveway Overlay: show logo; Driveway
+switch.driveway_overlay_show_nerd_mode; Driveway Overlay: show nerd mode; Driveway
+switch.driveway_detections_motion; Driveway Motion; Driveway
+switch.driveway_detections_person; Driveway Person detection; Driveway
+switch.driveway_detections_vehicle; Driveway Vehicle detection; Driveway
+switch.driveway_detections_animal; Driveway Animal detection; Driveway
+switch.driveway_detections_license_plate; Driveway License plate detection; Driveway
+switch.driveway_detections_smoke; Driveway Smoke detection; Driveway
+switch.driveway_detections_co; Driveway CO alarm detection; Driveway
+switch.driveway_detections_siren; Driveway Siren detection; Driveway
+switch.driveway_detections_baby_cry; Driveway Baby cry detection; Driveway
+switch.driveway_detections_speaking; Driveway Speaking detection; Driveway
+switch.driveway_detections_barking; Driveway Barking detection; Driveway
+switch.driveway_detections_car_alarm; Driveway Car alarm detection; Driveway
+switch.driveway_detections_car_horn; Driveway Car horn detection; Driveway
+switch.driveway_detections_glass_break; Driveway Glass break detection; Driveway
+switch.front_door_status_light_on; Front door Status light; Porch
+switch.front_door_system_sounds; Front door System sounds; Porch
+switch.front_door_overlay_show_name; Front door Overlay: show name; Porch
+switch.front_door_overlay_show_date; Front door Overlay: show date; Porch
+switch.front_door_overlay_show_logo; Front door Overlay: show logo; Porch
+switch.front_door_overlay_show_nerd_mode; Front door Overlay: show nerd mode; Porch
+switch.front_door_detections_motion; Front door Motion; Porch
+switch.front_door_detections_person; Front door Person detection; Porch
+switch.front_door_detections_vehicle; Front door Vehicle detection; Porch
+switch.front_door_detections_animal; Front door Animal detection; Porch
+switch.front_door_detections_package; Front door Package detection; Porch
+switch.front_door_detections_license_plate; Front door License plate detection; Porch
+switch.front_door_detections_smoke; Front door Smoke detection; Porch
+switch.front_door_detections_co; Front door CO alarm detection; Porch
+switch.front_door_detections_siren; Front door Siren detection; Porch
+switch.front_door_detections_baby_cry; Front door Baby cry detection; Porch
+switch.front_door_detections_speaking; Front door Speaking detection; Porch
+switch.front_door_detections_barking; Front door Barking detection; Porch
+switch.front_door_detections_car_alarm; Front door Car alarm detection; Porch
+switch.front_door_detections_car_horn; Front door Car horn detection; Porch
+switch.front_door_detections_glass_break; Front door Glass break detection; Porch
+switch.garage_overlay_show_name; Garage Overlay: show name; Garage
+switch.garage_overlay_show_date; Garage Overlay: show date; Garage
+switch.garage_overlay_show_logo; Garage Overlay: show logo; Garage
+switch.garage_overlay_show_nerd_mode; Garage Overlay: show nerd mode; Garage
+switch.garage_detections_motion; Garage Motion; Garage
+switch.ip_camera_ip_camera_overlay_show_name; IP camera IP Camera Overlay: show name; Master Bedroom
+switch.ip_camera_ip_camera_overlay_show_date; IP camera IP Camera Overlay: show date; Master Bedroom
+switch.ip_camera_ip_camera_overlay_show_logo; IP camera IP Camera Overlay: show logo; Master Bedroom
+switch.ip_camera_ip_camera_overlay_show_nerd_mode; IP camera IP Camera Overlay: show nerd mode; Master Bedroom
+switch.ip_camera_ip_camera_detections_motion; IP camera IP Camera Motion; Master Bedroom
+switch.ip_camera_ip_camera_tracking_person; IP camera IP Camera Tracking: person; Master Bedroom
+switch.g3_flex_status_light_on; Loft Status light; Loft
+switch.g3_flex_overlay_show_name; Loft Overlay: show name; Loft
+switch.g3_flex_overlay_show_date; Loft Overlay: show date; Loft
+switch.g3_flex_overlay_show_logo; Loft Overlay: show logo; Loft
+switch.g3_flex_overlay_show_nerd_mode; Loft Overlay: show nerd mode; Loft
+switch.g3_flex_detections_motion; Loft Motion; Loft
+switch.g3_pro_overlay_show_name; Basement Door Overlay: show name; Basement
+switch.g3_pro_overlay_show_date; Basement Door Overlay: show date; Basement
+switch.g3_pro_overlay_show_logo; Basement Door Overlay: show logo; Basement
+switch.g3_pro_overlay_show_nerd_mode; Basement Door Overlay: show nerd mode; Basement
+switch.g3_pro_detections_motion; Basement Door Motion; Basement
+switch.g3_flex_status_light_on_2; Basement Wide Status light; Basement
+switch.g3_flex_overlay_show_name_2; Basement Wide Overlay: show name; Basement
+switch.g3_flex_overlay_show_date_2; Basement Wide Overlay: show date; Basement
+switch.g3_flex_overlay_show_logo_2; Basement Wide Overlay: show logo; Basement
+switch.g3_flex_overlay_show_nerd_mode_2; Basement Wide Overlay: show nerd mode; Basement
+switch.g3_flex_detections_motion_2; Basement Wide Motion; Basement
+switch.deck_status_light_on; G4 Instant Status light; Deck
+switch.deck_system_sounds; G4 Instant System sounds; Deck
+switch.g4_instant_overlay_show_name; G4 Instant Overlay: show name; Deck
+switch.g4_instant_overlay_show_date; G4 Instant Overlay: show date; Deck
+switch.g4_instant_overlay_show_logo; G4 Instant Overlay: show logo; Deck
+switch.g4_instant_overlay_show_nerd_mode; G4 Instant Overlay: show nerd mode; Deck
+switch.g4_instant_detections_motion; G4 Instant Motion; Deck
+switch.deck_detections_person; G4 Instant Person detection; Deck
+switch.deck_detections_vehicle; G4 Instant Vehicle detection; Deck
+switch.deck_detections_animal; G4 Instant Animal detection; Deck
+switch.deck_detections_smoke; G4 Instant Smoke detection; Deck
+switch.deck_detections_co; G4 Instant CO alarm detection; Deck
+switch.deck_detections_baby_cry; G4 Instant Baby cry detection; Deck
+switch.deck_detections_speaking; G4 Instant Speaking detection; Deck
+switch.backyard_status_light_on; Backyard Status light; Basement
+switch.backyard_overlay_show_name; Backyard Overlay: show name; Basement
+switch.backyard_overlay_show_date; Backyard Overlay: show date; Basement
+switch.backyard_overlay_show_logo; Backyard Overlay: show logo; Basement
+switch.backyard_overlay_show_nerd_mode; Backyard Overlay: show nerd mode; Basement
+switch.backyard_detections_motion; Backyard Motion; Basement
+switch.backyard_detections_person; Backyard Person detection; Basement
+switch.backyard_detections_vehicle; Backyard Vehicle detection; Basement
+switch.backyard_detections_animal; Backyard Animal detection; Basement
+switch.backyard_detections_smoke; Backyard Smoke detection; Basement
+switch.backyard_detections_co; Backyard CO alarm detection; Basement
+switch.backyard_detections_baby_cry; Backyard Baby cry detection; Basement
+switch.backyard_detections_speaking; Backyard Speaking detection; Basement
+switch.up_floodlight_status_light_on; Driveway Floodlight Status light; Driveway
+switch.g3_instant_privacy_mode; Baby Cam Privacy mode; Loft
+switch.driveway_privacy_mode; Driveway Privacy mode; Driveway
+switch.front_door_privacy_mode; Front door Privacy mode; Porch
+switch.garage_privacy_mode; Garage Privacy mode; Garage
+switch.ip_camera_ip_camera_privacy_mode; IP camera IP Camera Privacy mode; Master Bedroom
+switch.g3_flex_privacy_mode; Loft Privacy mode; Loft
+switch.g3_pro_privacy_mode; Basement Door Privacy mode; Basement
+switch.g3_flex_privacy_mode_2; Basement Wide Privacy mode; Basement
+switch.g4_instant_privacy_mode; G4 Instant Privacy mode; Deck
+switch.backyard_privacy_mode; Backyard Privacy mode; Basement
+switch.brahma_analytics_enabled_2; Brahma Analytics enabled; Basement
+switch.brahma_insights_enabled_2; Brahma Insights enabled; Basement
+text.front_door_doorbell; Front door Doorbell; Porch
+binary_sensor.smart_socket_hub_problem; Smart Socket Hub Problem; Downstairs Guest
+switch.wifi_socket_socket_1; wifi Socket Socket 1; Downstairs Guest
+scene.right_lawn_hose; Right lawn hose; No Area
+vacuum.main_l10s_ultra; Main L10s Ultra  Main L10s Ultra; No Area
+sensor.main_l10s_ultra_cleaning_time; Main L10s Ultra Cleaning Time; No Area
+sensor.main_l10s_ultra_mapping_time; Main L10s Ultra Mapping Time; No Area
+sensor.main_l10s_ultra_cleaned_area; Main L10s Ultra Cleaned Area; No Area
+sensor.main_l10s_ultra_state; Main L10s Ultra State; No Area
+sensor.main_l10s_ultra_status; Main L10s Ultra Status; No Area
+sensor.main_l10s_ultra_relocation_status; Main L10s Ultra Relocation Status; No Area
+sensor.main_l10s_ultra_task_status; Main L10s Ultra Task Status; No Area
+sensor.main_l10s_ultra_mop_pad; Main L10s Ultra Mop Pad; No Area
+sensor.main_l10s_ultra_dust_collection; Main L10s Ultra Dust Collection; No Area
+sensor.main_l10s_ultra_auto_empty_status; Main L10s Ultra Auto Empty Status; No Area
+sensor.main_l10s_ultra_self_wash_base_status; Main L10s Ultra Self-Wash Base Status; No Area
+sensor.main_l10s_ultra_low_water_warning; Main L10s Ultra Low Water Warning; No Area
+sensor.main_l10s_ultra_stream_status; Main L10s Ultra Stream Status; No Area
+sensor.main_l10s_ultra_error; Main L10s Ultra Error; No Area
+sensor.main_l10s_ultra_charging_status; Main L10s Ultra Charging Status; No Area
+sensor.main_l10s_ultra_battery_level; Main L10s Ultra Battery Level; No Area
+sensor.main_l10s_ultra_main_brush_left; Main L10s Ultra Main Brush Left; No Area
+sensor.main_l10s_ultra_main_brush_time_left; Main L10s Ultra Main Brush  Time Left; No Area
+sensor.main_l10s_ultra_side_brush_left; Main L10s Ultra Side Brush Left; No Area
+sensor.main_l10s_ultra_side_brush_time_left; Main L10s Ultra Side Brush Time Left; No Area
+sensor.main_l10s_ultra_filter_left; Main L10s Ultra Filter Left; No Area
+sensor.main_l10s_ultra_filter_time_left; Main L10s Ultra Filter Time Left; No Area
+sensor.main_l10s_ultra_sensor_dirty_left; Main L10s Ultra Sensor Dirty Left; No Area
+sensor.main_l10s_ultra_sensor_dirty_time_left; Main L10s Ultra Sensor Dirty Time Left; No Area
+sensor.main_l10s_ultra_mop_pad_left; Main L10s Ultra Mop Pad Left; No Area
+sensor.main_l10s_ultra_mop_pad_time_left; Main L10s Ultra Mop Pad Time Left; No Area
+sensor.main_l10s_ultra_silver_ion_left; Main L10s Ultra Silver-ion Left; No Area
+sensor.main_l10s_ultra_silver_ion_time_left; Main L10s Ultra Silver-ion Time Left; No Area
+sensor.main_l10s_ultra_detergent_left; Main L10s Ultra Detergent Left; No Area
+sensor.main_l10s_ultra_detergent_time_left; Main L10s Ultra Detergent Time Left; No Area
+sensor.main_l10s_ultra_first_cleaning_date; Main L10s Ultra First Cleaning Date; No Area
+sensor.main_l10s_ultra_total_cleaning_time; Main L10s Ultra Total Cleaning Time; No Area
+sensor.main_l10s_ultra_cleaning_count; Main L10s Ultra Cleaning Count; No Area
+sensor.main_l10s_ultra_total_cleaned_area; Main L10s Ultra Total Cleaned Area; No Area
+sensor.main_l10s_ultra_current_room; Main L10s Ultra Current Room; No Area
+sensor.main_l10s_ultra_cleaning_history; Main L10s Ultra Cleaning History; No Area
+sensor.main_l10s_ultra_cruising_history; Main L10s Ultra Cruising History; No Area
+sensor.main_l10s_ultra_firmware_version; Main L10s Ultra Firmware Version; No Area
+binary_sensor.main_l10s_ultra_charging_state; Main L10s Ultra Charging State; No Area
+switch.main_l10s_ultra_resume_cleaning; Main L10s Ultra Resume Cleaning; No Area
+switch.main_l10s_ultra_carpet_boost; Main L10s Ultra Carpet Boost; No Area
+switch.main_l10s_ultra_obstacle_avoidance; Main L10s Ultra Obstacle Avoidance; No Area
+switch.main_l10s_ultra_customized_cleaning; Main L10s Ultra Customized Cleaning; No Area
+switch.main_l10s_ultra_child_lock; Main L10s Ultra Child Lock; No Area
+switch.main_l10s_ultra_dnd; Main L10s Ultra DnD; No Area
+switch.main_l10s_ultra_multi_floor_map; Main L10s Ultra Multi Floor Map; No Area
+switch.main_l10s_ultra_auto_dust_collecting; Main L10s Ultra Auto Dust Collecting; No Area
+switch.main_l10s_ultra_carpet_recognition; Main L10s Ultra Carpet Recognition; No Area
+switch.main_l10s_ultra_self_clean; Main L10s Ultra Self-Clean; No Area
+switch.main_l10s_ultra_intelligent_recognition; Main L10s Ultra Intelligent Recognition; No Area
+switch.main_l10s_ultra_auto_drying; Main L10s Ultra Auto Drying; No Area
+switch.main_l10s_ultra_carpet_avoidance; Main L10s Ultra Carpet Avoidance; No Area
+switch.main_l10s_ultra_auto_add_detergent; Main L10s Ultra Auto-Add Detergent; No Area
+switch.main_l10s_ultra_cleaning_sequence; Main L10s Ultra Cleaning Sequence; No Area
+switch.main_l10s_ultra_self_clean_by_zone; Main L10s Ultra Self Clean By Zone; No Area
+switch.main_l10s_ultra_ai_obstacle_detection; Main L10s Ultra AI Obstacle Detection; No Area
+switch.main_l10s_ultra_ai_obstacle_image_upload; Main L10s Ultra AI Obstacle Image Upload; No Area
+switch.main_l10s_ultra_ai_obstacle_picture; Main L10s Ultra AI Obstacle Picture; No Area
+switch.main_l10s_ultra_ai_pet_detection; Main L10s Ultra AI Pet Detection; No Area
+switch.main_l10s_ultra_ai_furniture_detection; Main L10s Ultra AI Furniture Detection; No Area
+switch.main_l10s_ultra_fuzzy_obstacle_detection; Main L10s Ultra Fuzzy Obstacle Detection; No Area
+switch.main_l10s_ultra_pet_picture; Main L10s Ultra Pet Picture; No Area
+switch.main_l10s_ultra_collision_avoidance; Main L10s Ultra Collision Avoidance; No Area
+button.main_l10s_ultra_reset_main_brush; Main L10s Ultra Reset Main Brush; No Area
+button.main_l10s_ultra_reset_side_brush; Main L10s Ultra Reset Side Brush; No Area
+button.main_l10s_ultra_reset_filter; Main L10s Ultra Reset Filter; No Area
+button.main_l10s_ultra_reset_sensor; Main L10s Ultra Reset Sensor; No Area
+button.main_l10s_ultra_reset_mop_pad; Main L10s Ultra Reset Mop Pad; No Area
+button.main_l10s_ultra_reset_silver_ion; Main L10s Ultra Reset Silver-ion; No Area
+button.main_l10s_ultra_reset_detergent; Main L10s Ultra Reset Detergent; No Area
+button.main_l10s_ultra_start_auto_empty; Main L10s Ultra Start Auto Empty; No Area
+button.main_l10s_ultra_clear_warning; Main L10s Ultra Clear Warning; No Area
+button.main_l10s_ultra_start_fast_mapping; Main L10s Ultra Start Fast Mapping; No Area
+button.main_l10s_ultra_self_clean; Main L10s Ultra Self Clean; No Area
+button.main_l10s_ultra_manual_drying; Main L10s Ultra Manual Drying; No Area
+button.main_l10s_ultra_water_tank_draining; Main L10s Ultra Water Tank Draining; No Area
+button.main_l10s_ultra_base_station_self_repair; Main L10s Ultra Base Station Self Repair; No Area
+button.main_l10s_ultra_reload_shortcuts; Main L10s Ultra Reload Shortcuts; No Area
+button.main_l10s_ultra_backup_map_1; Main L10s Ultra Backup Saved Map 1; No Area
+button.main_l10s_ultra_backup_map_2; Main L10s Ultra Backup Saved Map 2; No Area
+number.main_l10s_ultra_volume; Main L10s Ultra Volume; No Area
+number.main_l10s_ultra_self_clean_area; Main L10s Ultra Self Clean Area; No Area
+select.main_l10s_ultra_suction_level; Main L10s Ultra Suction Level; No Area
+select.main_l10s_ultra_cleaning_mode; Main L10s Ultra Cleaning Mode; No Area
+select.main_l10s_ultra_auto_empty_frequency; Main L10s Ultra Auto Empty Frequency; No Area
+select.main_l10s_ultra_drying_time; Main L10s Ultra Drying Time; No Area
+select.main_l10s_ultra_mop_wash_level; Main L10s Ultra Mop Wash Level; No Area
+select.main_l10s_ultra_mop_pad_humidity; Main L10s Ultra Mop Pad Humidity; No Area
+select.main_l10s_ultra_mopping_type; Main L10s Ultra Mopping Type; No Area
+select.main_l10s_ultra_wider_corner_coverage; Main L10s Ultra Wider Corner Coverage; No Area
+select.main_l10s_ultra_map_rotation; Main L10s Ultra Map Rotation; No Area
+select.main_l10s_ultra_selected_map; Main L10s Ultra Selected Map; No Area
+select.main_l10s_ultra_room_1_suction_level; Main L10s Ultra Suction Level Primary Bedroom; No Area
+select.main_l10s_ultra_room_1_mop_pad_humidity; Main L10s Ultra Mop Pad Humidity Primary Bedroom; No Area
+select.main_l10s_ultra_room_1_cleaning_mode; Main L10s Ultra Cleaning Mode Primary Bedroom; No Area
+select.main_l10s_ultra_room_1_cleaning_times; Main L10s Ultra Cleaning Times Primary Bedroom; No Area
+select.main_l10s_ultra_room_1_order; Main L10s Ultra Order Primary Bedroom; No Area
+select.main_l10s_ultra_room_1_floor_material; Main L10s Ultra Floor Material Primary Bedroom; No Area
+select.main_l10s_ultra_room_1_name; Main L10s Ultra Room 1 Name; No Area
+select.main_l10s_ultra_room_2_suction_level; Main L10s Ultra Suction Level Pantry; No Area
+select.main_l10s_ultra_room_2_mop_pad_humidity; Main L10s Ultra Mop Pad Humidity Pantry; No Area
+select.main_l10s_ultra_room_2_cleaning_mode; Main L10s Ultra Cleaning Mode Pantry; No Area
+select.main_l10s_ultra_room_2_cleaning_times; Main L10s Ultra Cleaning Times Pantry; No Area
+select.main_l10s_ultra_room_2_order; Main L10s Ultra Order Pantry; No Area
+select.main_l10s_ultra_room_2_floor_material; Main L10s Ultra Floor Material Pantry; No Area
+select.main_l10s_ultra_room_2_name; Main L10s Ultra Room 2 Name; No Area
+select.main_l10s_ultra_room_3_suction_level; Main L10s Ultra Suction Level Corridor; No Area
+select.main_l10s_ultra_room_3_mop_pad_humidity; Main L10s Ultra Mop Pad Humidity Corridor; No Area
+select.main_l10s_ultra_room_3_cleaning_mode; Main L10s Ultra Cleaning Mode Corridor; No Area
+select.main_l10s_ultra_room_3_cleaning_times; Main L10s Ultra Cleaning Times Corridor; No Area
+select.main_l10s_ultra_room_3_order; Main L10s Ultra Order Corridor; No Area
+select.main_l10s_ultra_room_3_floor_material; Main L10s Ultra Floor Material Corridor; No Area
+select.main_l10s_ultra_room_3_name; Main L10s Ultra Room 3 Name; No Area
+select.main_l10s_ultra_room_4_suction_level; Main L10s Ultra Suction Level Bathroom; No Area
+select.main_l10s_ultra_room_4_mop_pad_humidity; Main L10s Ultra Mop Pad Humidity Bathroom; No Area
+select.main_l10s_ultra_room_4_cleaning_mode; Main L10s Ultra Cleaning Mode Bathroom; No Area
+select.main_l10s_ultra_room_4_cleaning_times; Main L10s Ultra Cleaning Times Bathroom; No Area
+select.main_l10s_ultra_room_4_order; Main L10s Ultra Order Bathroom; No Area
+select.main_l10s_ultra_room_4_floor_material; Main L10s Ultra Floor Material Bathroom; No Area
+select.main_l10s_ultra_room_4_name; Main L10s Ultra Room 4 Name; No Area
+select.main_l10s_ultra_room_5_suction_level; Main L10s Ultra Suction Level Living Room; No Area
+select.main_l10s_ultra_room_5_mop_pad_humidity; Main L10s Ultra Mop Pad Humidity Living Room; No Area
+select.main_l10s_ultra_room_5_cleaning_mode; Main L10s Ultra Cleaning Mode Living Room; No Area
+select.main_l10s_ultra_room_5_cleaning_times; Main L10s Ultra Cleaning Times Living Room; No Area
+select.main_l10s_ultra_room_5_order; Main L10s Ultra Order Living Room; No Area
+select.main_l10s_ultra_room_5_floor_material; Main L10s Ultra Floor Material Living Room; No Area
+select.main_l10s_ultra_room_5_name; Main L10s Ultra Room 5 Name; No Area
+select.main_l10s_ultra_room_6_suction_level; Main L10s Ultra Suction Level Living Room 2; No Area
+select.main_l10s_ultra_room_6_mop_pad_humidity; Main L10s Ultra Mop Pad Humidity Living Room 2; No Area
+select.main_l10s_ultra_room_6_cleaning_mode; Main L10s Ultra Cleaning Mode Living Room 2; No Area
+select.main_l10s_ultra_room_6_cleaning_times; Main L10s Ultra Cleaning Times Living Room 2; No Area
+select.main_l10s_ultra_room_6_order; Main L10s Ultra Order Living Room 2; No Area
+select.main_l10s_ultra_room_6_floor_material; Main L10s Ultra Floor Material Living Room 2; No Area
+select.main_l10s_ultra_room_6_name; Main L10s Ultra Room 6 Name; No Area
+select.main_l10s_ultra_room_7_suction_level; Main L10s Ultra Suction Level Dining Hall; No Area
+select.main_l10s_ultra_room_7_mop_pad_humidity; Main L10s Ultra Mop Pad Humidity Dining Hall; No Area
+select.main_l10s_ultra_room_7_cleaning_mode; Main L10s Ultra Cleaning Mode Dining Hall; No Area
+select.main_l10s_ultra_room_7_cleaning_times; Main L10s Ultra Cleaning Times Dining Hall; No Area
+select.main_l10s_ultra_room_7_order; Main L10s Ultra Order Dining Hall; No Area
+select.main_l10s_ultra_room_7_floor_material; Main L10s Ultra Floor Material Dining Hall; No Area
+select.main_l10s_ultra_room_7_name; Main L10s Ultra Room 7 Name; No Area
+select.main_l10s_ultra_room_8_suction_level; Main L10s Ultra Suction Level Kitchen; No Area
+select.main_l10s_ultra_room_8_mop_pad_humidity; Main L10s Ultra Mop Pad Humidity Kitchen; No Area
+select.main_l10s_ultra_room_8_cleaning_mode; Main L10s Ultra Cleaning Mode Kitchen; No Area
+select.main_l10s_ultra_room_8_cleaning_times; Main L10s Ultra Cleaning Times Kitchen; No Area
+select.main_l10s_ultra_room_8_order; Main L10s Ultra Order Kitchen; No Area
+select.main_l10s_ultra_room_8_floor_material; Main L10s Ultra Floor Material Kitchen; No Area
+select.main_l10s_ultra_room_8_name; Main L10s Ultra Room 8 Name; No Area
+camera.main_l10s_ultra_map; Main L10s Ultra Current Map; No Area
+camera.main_l10s_ultra_map_1; Main L10s Ultra Saved Map 1; No Area
+camera.main_l10s_ultra_map_2; Main L10s Ultra Saved Map 2; No Area
+time.main_l10s_ultra_dnd_start; Main L10s Ultra DnD Start; No Area
+time.main_l10s_ultra_dnd_end; Main L10s Ultra DnD End; No Area
+vacuum.loft_l10s_ultra; Loft L10s Ultra  Loft L10s Ultra; Loft
+sensor.loft_l10s_ultra_cleaning_time; Loft L10s Ultra Cleaning Time; Loft
+sensor.loft_l10s_ultra_mapping_time; Loft L10s Ultra Mapping Time; Loft
+sensor.loft_l10s_ultra_cleaned_area; Loft L10s Ultra Cleaned Area; Loft
+sensor.loft_l10s_ultra_state; Loft L10s Ultra State; Loft
+sensor.loft_l10s_ultra_status; Loft L10s Ultra Status; Loft
+sensor.loft_l10s_ultra_relocation_status; Loft L10s Ultra Relocation Status; Loft
+sensor.loft_l10s_ultra_task_status; Loft L10s Ultra Task Status; Loft
+sensor.loft_l10s_ultra_mop_pad; Loft L10s Ultra Mop Pad; Loft
+sensor.loft_l10s_ultra_dust_collection; Loft L10s Ultra Dust Collection; Loft
+sensor.loft_l10s_ultra_auto_empty_status; Loft L10s Ultra Auto Empty Status; Loft
+sensor.loft_l10s_ultra_self_wash_base_status; Loft L10s Ultra Self-Wash Base Status; Loft
+sensor.loft_l10s_ultra_low_water_warning; Loft L10s Ultra Low Water Warning; Loft
+sensor.loft_l10s_ultra_stream_status; Loft L10s Ultra Stream Status; Loft
+sensor.loft_l10s_ultra_error; Loft L10s Ultra Error; Loft
+sensor.loft_l10s_ultra_charging_status; Loft L10s Ultra Charging Status; Loft
+sensor.loft_l10s_ultra_battery_level; Loft L10s Ultra Battery Level; Loft
+sensor.loft_l10s_ultra_main_brush_left; Loft L10s Ultra Main Brush Left; Loft
+sensor.loft_l10s_ultra_main_brush_time_left; Loft L10s Ultra Main Brush  Time Left; Loft
+sensor.loft_l10s_ultra_side_brush_left; Loft L10s Ultra Side Brush Left; Loft
+sensor.loft_l10s_ultra_side_brush_time_left; Loft L10s Ultra Side Brush Time Left; Loft
+sensor.loft_l10s_ultra_filter_left; Loft L10s Ultra Filter Left; Loft
+sensor.loft_l10s_ultra_filter_time_left; Loft L10s Ultra Filter Time Left; Loft
+sensor.loft_l10s_ultra_sensor_dirty_left; Loft L10s Ultra Sensor Dirty Left; Loft
+sensor.loft_l10s_ultra_sensor_dirty_time_left; Loft L10s Ultra Sensor Dirty Time Left; Loft
+sensor.loft_l10s_ultra_mop_pad_left; Loft L10s Ultra Mop Pad Left; Loft
+sensor.loft_l10s_ultra_mop_pad_time_left; Loft L10s Ultra Mop Pad Time Left; Loft
+sensor.loft_l10s_ultra_silver_ion_left; Loft L10s Ultra Silver-ion Left; Loft
+sensor.loft_l10s_ultra_silver_ion_time_left; Loft L10s Ultra Silver-ion Time Left; Loft
+sensor.loft_l10s_ultra_detergent_left; Loft L10s Ultra Detergent Left; Loft
+sensor.loft_l10s_ultra_detergent_time_left; Loft L10s Ultra Detergent Time Left; Loft
+sensor.loft_l10s_ultra_first_cleaning_date; Loft L10s Ultra First Cleaning Date; Loft
+sensor.loft_l10s_ultra_total_cleaning_time; Loft L10s Ultra Total Cleaning Time; Loft
+sensor.loft_l10s_ultra_cleaning_count; Loft L10s Ultra Cleaning Count; Loft
+sensor.loft_l10s_ultra_total_cleaned_area; Loft L10s Ultra Total Cleaned Area; Loft
+sensor.loft_l10s_ultra_current_room; Loft L10s Ultra Current Room; Loft
+sensor.loft_l10s_ultra_cleaning_history; Loft L10s Ultra Cleaning History; Loft
+sensor.loft_l10s_ultra_cruising_history; Loft L10s Ultra Cruising History; Loft
+sensor.loft_l10s_ultra_firmware_version; Loft L10s Ultra Firmware Version; Loft
+binary_sensor.loft_l10s_ultra_charging_state; Loft L10s Ultra Charging State; Loft
+switch.loft_l10s_ultra_resume_cleaning; Loft L10s Ultra Resume Cleaning; Loft
+switch.loft_l10s_ultra_carpet_boost; Loft L10s Ultra Carpet Boost; Loft
+switch.loft_l10s_ultra_obstacle_avoidance; Loft L10s Ultra Obstacle Avoidance; Loft
+switch.loft_l10s_ultra_customized_cleaning; Loft L10s Ultra Customized Cleaning; Loft
+switch.loft_l10s_ultra_child_lock; Loft L10s Ultra Child Lock; Loft
+switch.loft_l10s_ultra_dnd; Loft L10s Ultra DnD; Loft
+switch.loft_l10s_ultra_multi_floor_map; Loft L10s Ultra Multi Floor Map; Loft
+switch.loft_l10s_ultra_auto_dust_collecting; Loft L10s Ultra Auto Dust Collecting; Loft
+switch.loft_l10s_ultra_carpet_recognition; Loft L10s Ultra Carpet Recognition; Loft
+switch.loft_l10s_ultra_self_clean; Loft L10s Ultra Self-Clean; Loft
+switch.loft_l10s_ultra_intelligent_recognition; Loft L10s Ultra Intelligent Recognition; Loft
+switch.loft_l10s_ultra_auto_drying; Loft L10s Ultra Auto Drying; Loft
+switch.loft_l10s_ultra_carpet_avoidance; Loft L10s Ultra Carpet Avoidance; Loft
+switch.loft_l10s_ultra_auto_add_detergent; Loft L10s Ultra Auto-Add Detergent; Loft
+switch.loft_l10s_ultra_cleaning_sequence; Loft L10s Ultra Cleaning Sequence; Loft
+switch.loft_l10s_ultra_self_clean_by_zone; Loft L10s Ultra Self Clean By Zone; Loft
+switch.loft_l10s_ultra_ai_obstacle_detection; Loft L10s Ultra AI Obstacle Detection; Loft
+switch.loft_l10s_ultra_ai_obstacle_image_upload; Loft L10s Ultra AI Obstacle Image Upload; Loft
+switch.loft_l10s_ultra_ai_obstacle_picture; Loft L10s Ultra AI Obstacle Picture; Loft
+switch.loft_l10s_ultra_ai_pet_detection; Loft L10s Ultra AI Pet Detection; Loft
+switch.loft_l10s_ultra_ai_furniture_detection; Loft L10s Ultra AI Furniture Detection; Loft
+switch.loft_l10s_ultra_fuzzy_obstacle_detection; Loft L10s Ultra Fuzzy Obstacle Detection; Loft
+switch.loft_l10s_ultra_pet_picture; Loft L10s Ultra Pet Picture; Loft
+switch.loft_l10s_ultra_collision_avoidance; Loft L10s Ultra Collision Avoidance; Loft
+button.loft_l10s_ultra_reset_main_brush; Loft L10s Ultra Reset Main Brush; Loft
+button.loft_l10s_ultra_reset_side_brush; Loft L10s Ultra Reset Side Brush; Loft
+button.loft_l10s_ultra_reset_filter; Loft L10s Ultra Reset Filter; Loft
+button.loft_l10s_ultra_reset_sensor; Loft L10s Ultra Reset Sensor; Loft
+button.loft_l10s_ultra_reset_mop_pad; Loft L10s Ultra Reset Mop Pad; Loft
+button.loft_l10s_ultra_reset_silver_ion; Loft L10s Ultra Reset Silver-ion; Loft
+button.loft_l10s_ultra_reset_detergent; Loft L10s Ultra Reset Detergent; Loft
+button.loft_l10s_ultra_start_auto_empty; Loft L10s Ultra Start Auto Empty; Loft
+button.loft_l10s_ultra_clear_warning; Loft L10s Ultra Clear Warning; Loft
+button.loft_l10s_ultra_start_fast_mapping; Loft L10s Ultra Start Fast Mapping; Loft
+button.loft_l10s_ultra_self_clean; Loft L10s Ultra Self Clean; Loft
+button.loft_l10s_ultra_manual_drying; Loft L10s Ultra Manual Drying; Loft
+button.loft_l10s_ultra_water_tank_draining; Loft L10s Ultra Water Tank Draining; Loft
+button.loft_l10s_ultra_base_station_self_repair; Loft L10s Ultra Base Station Self Repair; Loft
+button.loft_l10s_ultra_reload_shortcuts; Loft L10s Ultra Reload Shortcuts; Loft
+button.loft_l10s_ultra_backup_map_1; Loft L10s Ultra Backup Saved Map 1; Loft
+number.loft_l10s_ultra_volume; Loft L10s Ultra Volume; Loft
+number.loft_l10s_ultra_self_clean_area; Loft L10s Ultra Self Clean Area; Loft
+select.loft_l10s_ultra_suction_level; Loft L10s Ultra Suction Level; Loft
+select.loft_l10s_ultra_cleaning_mode; Loft L10s Ultra Cleaning Mode; Loft
+select.loft_l10s_ultra_auto_empty_frequency; Loft L10s Ultra Auto Empty Frequency; Loft
+select.loft_l10s_ultra_drying_time; Loft L10s Ultra Drying Time; Loft
+select.loft_l10s_ultra_mop_wash_level; Loft L10s Ultra Mop Wash Level; Loft
+select.loft_l10s_ultra_mop_pad_humidity; Loft L10s Ultra Mop Pad Humidity; Loft
+select.loft_l10s_ultra_mopping_type; Loft L10s Ultra Mopping Type; Loft
+select.loft_l10s_ultra_wider_corner_coverage; Loft L10s Ultra Wider Corner Coverage; Loft
+select.loft_l10s_ultra_map_rotation; Loft L10s Ultra Map Rotation; Loft
+select.loft_l10s_ultra_selected_map; Loft L10s Ultra Selected Map; Loft
+select.loft_l10s_ultra_room_1_suction_level; Loft L10s Ultra Suction Level Recreation Area; Loft
+select.loft_l10s_ultra_room_1_mop_pad_humidity; Loft L10s Ultra Mop Pad Humidity Recreation Area; Loft
+select.loft_l10s_ultra_room_1_cleaning_mode; Loft L10s Ultra Cleaning Mode Recreation Area; Loft
+select.loft_l10s_ultra_room_1_cleaning_times; Loft L10s Ultra Cleaning Times Recreation Area; Loft
+select.loft_l10s_ultra_room_1_order; Loft L10s Ultra Order Recreation Area; Loft
+select.loft_l10s_ultra_room_1_floor_material; Loft L10s Ultra Floor Material Recreation Area; Loft
+select.loft_l10s_ultra_room_1_name; Loft L10s Ultra Room 1 Name; Loft
+select.loft_l10s_ultra_room_2_suction_level; Loft L10s Ultra Suction Level Room 2; Loft
+select.loft_l10s_ultra_room_2_mop_pad_humidity; Loft L10s Ultra Mop Pad Humidity Room 2; Loft
+select.loft_l10s_ultra_room_2_cleaning_mode; Loft L10s Ultra Cleaning Mode Room 2; Loft
+select.loft_l10s_ultra_room_2_cleaning_times; Loft L10s Ultra Cleaning Times Room 2; Loft
+select.loft_l10s_ultra_room_2_order; Loft L10s Ultra Order Room 2; Loft
+select.loft_l10s_ultra_room_2_floor_material; Loft L10s Ultra Floor Material Room 2; Loft
+select.loft_l10s_ultra_room_2_name; Loft L10s Ultra Room 2 Name; Loft
+select.loft_l10s_ultra_room_3_suction_level; Loft L10s Ultra Suction Level Secondary Bedroom; Loft
+select.loft_l10s_ultra_room_3_mop_pad_humidity; Loft L10s Ultra Mop Pad Humidity Secondary Bedroom; Loft
+select.loft_l10s_ultra_room_3_cleaning_mode; Loft L10s Ultra Cleaning Mode Secondary Bedroom; Loft
+select.loft_l10s_ultra_room_3_cleaning_times; Loft L10s Ultra Cleaning Times Secondary Bedroom; Loft
+select.loft_l10s_ultra_room_3_order; Loft L10s Ultra Order Secondary Bedroom; Loft
+select.loft_l10s_ultra_room_3_floor_material; Loft L10s Ultra Floor Material Secondary Bedroom; Loft
+select.loft_l10s_ultra_room_3_name; Loft L10s Ultra Room 3 Name; Loft
+select.loft_l10s_ultra_room_4_suction_level; Loft L10s Ultra Suction Level Office; Loft
+select.loft_l10s_ultra_room_4_mop_pad_humidity; Loft L10s Ultra Mop Pad Humidity Office; Loft
+select.loft_l10s_ultra_room_4_cleaning_mode; Loft L10s Ultra Cleaning Mode Office; Loft
+select.loft_l10s_ultra_room_4_cleaning_times; Loft L10s Ultra Cleaning Times Office; Loft
+select.loft_l10s_ultra_room_4_order; Loft L10s Ultra Order Office; Loft
+select.loft_l10s_ultra_room_4_floor_material; Loft L10s Ultra Floor Material Office; Loft
+select.loft_l10s_ultra_room_4_name; Loft L10s Ultra Room 4 Name; Loft
+select.loft_l10s_ultra_room_5_suction_level; Loft L10s Ultra Suction Level Corridor; Loft
+select.loft_l10s_ultra_room_5_mop_pad_humidity; Loft L10s Ultra Mop Pad Humidity Corridor; Loft
+select.loft_l10s_ultra_room_5_cleaning_mode; Loft L10s Ultra Cleaning Mode Corridor; Loft
+select.loft_l10s_ultra_room_5_cleaning_times; Loft L10s Ultra Cleaning Times Corridor; Loft
+select.loft_l10s_ultra_room_5_order; Loft L10s Ultra Order Corridor; Loft
+select.loft_l10s_ultra_room_5_floor_material; Loft L10s Ultra Floor Material Corridor; Loft
+select.loft_l10s_ultra_room_5_name; Loft L10s Ultra Room 5 Name; Loft
+select.loft_l10s_ultra_room_6_suction_level; Loft L10s Ultra Suction Level Loft; Loft
+select.loft_l10s_ultra_room_6_mop_pad_humidity; Loft L10s Ultra Mop Pad Humidity Loft; Loft
+select.loft_l10s_ultra_room_6_cleaning_mode; Loft L10s Ultra Cleaning Mode Loft; Loft
+select.loft_l10s_ultra_room_6_cleaning_times; Loft L10s Ultra Cleaning Times Loft; Loft
+select.loft_l10s_ultra_room_6_order; Loft L10s Ultra Order Loft; Loft
+select.loft_l10s_ultra_room_6_floor_material; Loft L10s Ultra Floor Material Loft; Loft
+select.loft_l10s_ultra_room_6_name; Loft L10s Ultra Room 6 Name; Loft
+camera.loft_l10s_ultra_map; Loft L10s Ultra Current Map; Loft
+camera.loft_l10s_ultra_map_1; Loft L10s Ultra Saved Map 1; Loft
+time.loft_l10s_ultra_dnd_start; Loft L10s Ultra DnD Start; Loft
+time.loft_l10s_ultra_dnd_end; Loft L10s Ultra DnD End; Loft
+binary_sensor.back_door_opening; Back door Opening; Living Room
+binary_sensor.garage_door_opening; Garage Door Opening; Kitchen
+binary_sensor.kitchen_motion_motion; Kitchen Motion Motion; Kitchen
+binary_sensor.upstairs_bathroom_leak_sensor_moisture; Upstairs Bathroom leak sensor Moisture; Upstairs Bathroom
+binary_sensor.kitchen_sink_leak_sensor_moisture; Kitchen Sink leak sensor Moisture; Kitchen
+binary_sensor.living_room_vibration_sensor_vibration; Living Room Vibration sensor Vibration; Living Room
+binary_sensor.living_room_window_1_opening; Living Room Window 1 Opening; Living Room
+binary_sensor.living_room_window_2_opening; Living Room Window 2 Opening; Living Room
+binary_sensor.living_room_window_3_opening; Living Room Window 3 Opening; Living Room
+binary_sensor.master_bathroom_leak_sensor_moisture; Master Bathroom leak sensor Moisture; Master Bathroom
+binary_sensor.guest_bathroom_leak_sensor_moisture; Guest Bathroom leak sensor Moisture; Downstairs Bathroom
+binary_sensor.basement_door_opening; Basement Door Opening; Basement
+binary_sensor.basement_window_opening; Basement window Opening; Basement
+binary_sensor.boiler_leak_sensor_moisture; Boiler leak sensor Moisture; Basement
+binary_sensor.flex_room_window_opening; Flex room window Opening; Flex Room
+binary_sensor.guest_bedroom_window_1_opening; Guest bedroom window 1 Opening; Downstairs Guest
+binary_sensor.guest_bedroom_window_2_opening; Guest bedroom window 2 Opening; Downstairs Guest
+binary_sensor.front_door_opening; Front door Opening; Entryway
+binary_sensor.dresser_button_ias_zone; Dresser button; Master Bathroom
+button.master_button_identify; button Identify; Master Bedroom
+button.back_door_identify; Back door Identify; Living Room
+button.garage_door_identify; Garage Door Identify; Kitchen
+button.kitchen_motion_identify; Kitchen Motion Identify; Kitchen
+button.bedroom_temperature_sensor_identify; Bedroom Temperature Sensor Identify; Master Bedroom
+button.upstairs_bathroom_leak_sensor_identify; Upstairs Bathroom leak sensor Identify; Upstairs Bathroom
+button.kitchen_sink_leak_sensor_identify; Kitchen Sink leak sensor Identify; Kitchen
+button.living_room_vibration_sensor_identify; Living Room Vibration sensor Identify; Living Room
+button.living_room_window_1_identify; Living Room Window 1 Identify; Living Room
+button.living_room_window_2_identify; Living Room Window 2 Identify; Living Room
+button.living_room_window_3_identify; Living Room Window 3 Identify; Living Room
+button.master_bathroom_leak_sensor_identify; Master Bathroom leak sensor Identify; Master Bathroom
+button.guest_bathroom_leak_sensor_identify; Guest Bathroom leak sensor Identify; Downstairs Bathroom
+button.basement_door_identify; Basement Door Identify; Basement
+button.basement_window_identify; Basement window Identify; Basement
+button.boiler_leak_sensor_identify; Boiler leak sensor Identify; Basement
+button.living_room_sensor_identify; Living room sensor Identify; Living Room
+button.basement_temperature_sensor_identify; Basement temperature sensor Identify; Basement
+button.flex_room_window_identify; Flex room window Identify; Flex Room
+button.guest_bedroom_window_1_identify; Guest bedroom window 1 Identify; Downstairs Guest
+button.guest_bedroom_window_2_identify; Guest bedroom window 2 Identify; Downstairs Guest
+button.front_door_identify; Front door Identify; Entryway
+button.living_room_outlet_identify; Living Room Outlet Identify; Living Room
+button.master_bedroom_dresser_light_identify; Master Bedroom Dresser Light Identify; Master Bedroom
+button.guest_bedroom_outlet_identify; Guest bedroom outlet Identify; Downstairs Guest
+button.dresser_button_identify; Dresser button Identify; Master Bathroom
+button.prometheus_outlet_identify; Prometheus Outlet Identify; Basement
+button.prometheus_outlet_reset_summation_delivered; Prometheus Outlet Reset summation delivered; Basement
+button.loft_outlet_identify; Clonos Outlet Identify; Basement
+button.loft_outlet_reset_summation_delivered; Clonos Outlet Reset summation delivered; Basement
+button.porch_lights_identify; Porch Lights Identify; Porch
+button.flex_corner_floor_lamp_identify; Flex Corner Floor Lamp Identify; Flex Room
+button.living_room_lights_identify; Living room lights Identify; Living Room
+button.christmas_lights_identify; Christmas lights Identify; Living Room
+button.christmas_lights_reset_summation_delivered; Christmas lights Reset summation delivered; Living Room
+button.lawn_showlight_identify; Lawn Showlight Identify; Garage
+light.living_room_lights; Living room lights; Living Room
+number.prometheus_outlet_turn_off_delay; Prometheus Outlet Turn off delay; Basement
+number.prometheus_outlet_turn_on_delay; Prometheus Outlet Turn on delay; Basement
+number.clonos_outlet_turn_off_delay; Clonos Outlet Turn off delay; Basement
+number.clonos_outlet_turn_on_delay; Clonos Outlet Turn on delay; Basement
+number.christmas_lights_turn_off_delay; Christmas lights Turn off delay; Living Room
+number.christmas_lights_turn_on_delay; Christmas lights Turn on delay; Living Room
+select.prometheus_outlet_start_up_behavior; Prometheus Outlet Start-up behavior; Basement
+select.loft_outlet_start_up_behavior; Clonos Outlet Start-up behavior; Basement
+select.porch_lights_power_on_state; Porch Lights Power on state; Porch
+select.porch_lights_backlight_mode; Porch Lights Backlight mode; Porch
+select.flex_corner_floor_lamp_power_on_state; Flex Corner Floor Lamp Power on state; Flex Room
+select.flex_corner_floor_lamp_backlight_mode; Flex Corner Floor Lamp Backlight mode; Flex Room
+select.christmas_lights_start_up_behavior; Christmas lights Power-on behavior; Living Room
+select.lawn_showlight_power_on_state; Lawn Showlight Power on state; Garage
+select.lawn_showlight_backlight_mode; Lawn Showlight Backlight mode; Garage
+sensor.master_button_battery; button Battery; Master Bedroom
+sensor.back_door_battery; Back door Battery; Living Room
+sensor.garage_door_battery; Garage Door Battery; Kitchen
+sensor.kitchen_motion_battery; Kitchen Motion Battery; Kitchen
+sensor.bedroom_temperature_sensor_temperature; Bedroom Temperature Sensor Temperature; Master Bedroom
+sensor.bedroom_temperature_sensor_humidity; Bedroom Temperature Sensor Humidity; Master Bedroom
+sensor.bedroom_temperature_sensor_battery; Bedroom Temperature Sensor Battery; Master Bedroom
+sensor.upstairs_bathroom_leak_sensor_battery; Upstairs Bathroom leak sensor Battery; Upstairs Bathroom
+sensor.upstairs_bathroom_leak_sensor_device_temperature; Upstairs Bathroom leak sensor Device temperature; Upstairs Bathroom
+sensor.kitchen_sink_leak_sensor_battery; Kitchen Sink leak sensor Battery; Kitchen
+sensor.kitchen_sink_leak_sensor_device_temperature; Kitchen Sink leak sensor Device temperature; Kitchen
+sensor.living_room_vibration_sensor_battery; Living Room Vibration sensor Battery; Living Room
+sensor.living_room_vibration_sensor_device_temperature; Living Room Vibration sensor Device temperature; Living Room
+sensor.living_room_window_1_battery; Living Room Window 1 Battery; Living Room
+sensor.living_room_window_1_device_temperature; Living Room Window 1 Device temperature; Living Room
+sensor.living_room_window_2_battery; Living Room Window 2 Battery; Living Room
+sensor.living_room_window_2_device_temperature; Living Room Window 2 Device temperature; Living Room
+sensor.living_room_window_3_battery; Living Room Window 3 Battery; Living Room
+sensor.living_room_window_3_device_temperature; Living Room Window 3 Device temperature; Living Room
+sensor.master_bathroom_leak_sensor_battery; Master Bathroom leak sensor Battery; Master Bathroom
+sensor.master_bathroom_leak_sensor_device_temperature; Master Bathroom leak sensor Device temperature; Master Bathroom
+sensor.guest_bathroom_leak_sensor_battery; Guest Bathroom leak sensor Battery; Downstairs Bathroom
+sensor.guest_bathroom_leak_sensor_device_temperature; Guest Bathroom leak sensor Device temperature; Downstairs Bathroom
+sensor.basement_door_battery; Basement Door Battery; Basement
+sensor.basement_door_device_temperature; Basement Door Device temperature; Basement
+sensor.basement_window_battery; Basement window Battery; Basement
+sensor.basement_window_device_temperature; Basement window Device temperature; Basement
+sensor.boiler_leak_sensor_battery; Boiler leak sensor Battery; Basement
+sensor.boiler_leak_sensor_device_temperature; Boiler leak sensor Device temperature; Basement
+sensor.living_room_sensor_battery; Living room sensor Battery; Living Room
+sensor.living_room_sensor_temperature; Living room sensor Temperature; Living Room
+sensor.living_room_sensor_pressure; Living room sensor Pressure; Living Room
+sensor.living_room_sensor_humidity; Living room sensor Humidity; Living Room
+sensor.basement_temperature_sensor_battery; Basement temperature sensor Battery; Basement
+sensor.basement_temperature_sensor_temperature; Basement temperature sensor Temperature; Basement
+sensor.basement_temperature_sensor_pressure; Basement temperature sensor Pressure; Basement
+sensor.basement_temperature_sensor_humidity; Basement temperature sensor Humidity; Basement
+sensor.flex_room_window_battery; Flex room window Battery; Flex Room
+sensor.flex_room_window_device_temperature; Flex room window Device temperature; Flex Room
+sensor.guest_bedroom_window_1_battery; Guest bedroom window 1 Battery; Downstairs Guest
+sensor.guest_bedroom_window_1_device_temperature; Guest bedroom window 1 Device temperature; Downstairs Guest
+sensor.guest_bedroom_window_2_battery; Guest bedroom window 2 Battery; Downstairs Guest
+sensor.guest_bedroom_window_2_device_temperature; Guest bedroom window 2 Device temperature; Downstairs Guest
+sensor.front_door_battery; Front door Battery; Entryway
+sensor.front_door_device_temperature; Front door Device temperature; Entryway
+sensor.dresser_button_battery; Dresser button Battery; Master Bathroom
+sensor.dresser_button_temperature; Dresser button Temperature; Master Bathroom
+sensor.prometheus_outlet_power; Prometheus Outlet Power; Basement
+sensor.prometheus_outlet_current; Prometheus Outlet Current; Basement
+sensor.prometheus_outlet_voltage; Prometheus Outlet Voltage; Basement
+sensor.prometheus_outlet_ac_frequency; Prometheus Outlet AC frequency; Basement
+sensor.prometheus_outlet_power_factor; Prometheus Outlet Power factor; Basement
+sensor.prometheus_outlet_instantaneous_demand; Prometheus Outlet Instantaneous demand; Basement
+sensor.prometheus_outlet_summation_delivered; Prometheus Outlet Summation delivered; Basement
+sensor.loft_outlet_power; Clonos Outlet Power; Basement
+sensor.loft_outlet_current; Clonos Outlet Current; Basement
+sensor.loft_outlet_voltage; Clonos Outlet Voltage; Basement
+sensor.loft_outlet_ac_frequency; Clonos Outlet AC frequency; Basement
+sensor.loft_outlet_power_factor; Clonos Outlet Power factor; Basement
+sensor.loft_outlet_instantaneous_demand; Clonos Outlet Instantaneous demand; Basement
+sensor.loft_outlet_summation_delivered; Clonos Outlet Summation delivered; Basement
+sensor.tz3210_xej4kukg_ts011f_rssi; Porch Lights RSSI; Porch
+sensor.tz3210_xej4kukg_ts011f_lqi; Porch Lights LQI; Porch
+sensor.porch_lights_summation_delivered; Porch Lights Summation delivered; Porch
+sensor.porch_lights_power; Porch Lights Power; Porch
+sensor.porch_lights_current; Porch Lights Current; Porch
+sensor.porch_lights_voltage; Porch Lights Voltage; Porch
+sensor.flex_corner_floor_lamp_summation_delivered; Flex Corner Floor Lamp Summation delivered; Flex Room
+sensor.flex_corner_floor_lamp_power; Flex Corner Floor Lamp Power; Flex Room
+sensor.flex_corner_floor_lamp_current; Flex Corner Floor Lamp Current; Flex Room
+sensor.flex_corner_floor_lamp_voltage; Flex Corner Floor Lamp Voltage; Flex Room
+sensor.christmas_lights_power; Christmas lights Power; Living Room
+sensor.christmas_lights_current; Christmas lights Current; Living Room
+sensor.christmas_lights_voltage; Christmas lights Voltage; Living Room
+sensor.christmas_lights_ac_frequency; Christmas lights AC frequency; Living Room
+sensor.christmas_lights_power_factor; Christmas lights Power factor; Living Room
+sensor.christmas_lights_instantaneous_demand; Christmas lights Instantaneous demand; Living Room
+sensor.christmas_lights_summation_delivered; Christmas lights Summation delivered; Living Room
+sensor.lawn_showlight_summation_delivered; Lawn Showlight Summation delivered; Garage
+sensor.lawn_showlight_power; Lawn Showlight Power; Garage
+sensor.lawn_showlight_current; Lawn Showlight Current; Garage
+sensor.lawn_showlight_voltage; Lawn Showlight Voltage; Garage
+switch.living_room_outlet_switch; Living Room Outlet Switch; Living Room
+switch.master_bedroom_dresser_light_switch; Master Bedroom Dresser Light Switch; Master Bedroom
+switch.guest_bedroom_outlet_switch; Guest bedroom outlet Switch; Downstairs Guest
+switch.prometheus_outlet_switch; Prometheus Outlet Switch; Basement
+switch.loft_outlet; Clonos Outlet; Basement
+switch.porch_lights_child_lock; Porch Lights Child lock; Porch
+switch.porch_lights; Porch Lights; Porch
+switch.flex_corner_floor_lamp_child_lock; Flex Corner Floor Lamp Child lock; Flex Room
+switch.flex_corner_floor_lamp; Flex Corner Floor Lamp; Flex Room
+switch.christmas_lights; Christmas lights; Living Room
+switch.lawn_showlight_child_lock; Lawn Showlight Child lock; Garage
+switch.lawn_showlight; Lawn Showlight; Garage
+update.upstairs_bathroom_leak_sensor_firmware; Upstairs Bathroom leak sensor Firmware; Upstairs Bathroom
+update.kitchen_sink_leak_sensor_firmware; Kitchen Sink leak sensor Firmware; Kitchen
+update.living_room_vibration_sensor_firmware; Living Room Vibration sensor Firmware; Living Room
+update.master_bathroom_leak_sensor_firmware; Master Bathroom leak sensor Firmware; Master Bathroom
+update.guest_bathroom_leak_sensor_firmware; Guest Bathroom leak sensor Firmware; Downstairs Bathroom
+update.boiler_leak_sensor_firmware; Boiler leak sensor Firmware; Basement
+update.living_room_outlet_firmware; Living Room Outlet Firmware; Living Room
+update.master_bedroom_dresser_light_firmware; Master Bedroom Dresser Light Firmware; Master Bedroom
+update.dresser_button_firmware; Dresser button Firmware; Master Bathroom
+update.prometheus_outlet_firmware; Prometheus Outlet Firmware; Basement
+update.loft_outlet_firmware; Clonos Outlet Firmware; Basement
+update.porch_lights_firmware; Porch Lights Firmware; Porch
+update.flex_corner_floor_lamp_firmware; Flex Corner Floor Lamp Firmware; Flex Room
+update.christmas_lights_firmware; Christmas lights Firmware; Living Room
+update.lawn_showlight_firmware; Lawn Showlight Firmware; Garage
+automation.when_sunrises_switch_off_driveway_lights; When sunrises switch off driveway lights ; No Area
+automation.when_sunsets_switch_on_driveway_lights; When sunsets switch on driveway lights ; No Area
+automation.when_dresser_button_is_pressed_toggle_dresser_lights; When Dresser button is pressed toggle dresser lights; Master Bedroom
+automation.at_sunset_turn_on_lawn_showlight; At sunset turn on lawn showlight; No Area
+automation.at_sunrise_turn_off_lawn_showlight; At sunrise turn off lawn showlight; No Area
+camera.g3_pro_high_resolution_channel; High resolution channel; Basement
+sensor.driveway_license_plate_detected; License plate detected; Driveway
+sensor.front_door_license_plate_detected; License plate detected; Porch
+binary_sensor.ai_port_motion; Motion; Basement
+sensor.baby_cam_license_plate_detected; License plate detected; Loft
+media_player.front_door; front door; Porch
+text.watchman_ignored_labels; Watchman Ignored Labels; Basement
+button.watchman_report; Report; Basement
+number.g4_instant_wide_dynamic_range; Wide dynamic range; Deck
+camera.deck_high_resolution_channel; High resolution channel; Deck
+binary_sensor.backups_stale; Backups Stale; No Area
+sensor.backup_state; Backup State; No Area
+sensor.weekday; Weekday; No Area
+sensor.weekday_2; Weekday; No Area
+sensor.month; Month; No Area
+Result type: string
+
+This template listens for all state changed events.

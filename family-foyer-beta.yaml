@@ -1,5 +1,4 @@
 decluttering_templates:
-  # Room name + free-form status line (black text, no icon) - top-left of a room tile
   room_summary_card:
     default:
       - room_name: Room
@@ -29,8 +28,6 @@ decluttering_templates:
               --card-primary-color: var(--primary-text-color);
               --card-secondary-color: var(--primary-text-color);
             }
-
-  # Large circular icon that toggles a light/switch - bottom-left of a room tile
   big_icon_toggle_card:
     default:
       - entity: switch.example
@@ -72,8 +69,6 @@ decluttering_templates:
               margin-top: -8px !important;
               margin-left: -24px !important;
             }
-
-  # A single camera tile (advanced-camera-card) with fixed height
   camera_tile:
     default:
       - camera_entity: camera.example
@@ -89,11 +84,7 @@ decluttering_templates:
             overflow: hidden;
             border-radius: 20px;
           }
-
 views:
-  # ==========================================================================
-  # MAIN  (default view)  -  top nav tabs + 3 rows x 4 columns
-  # ==========================================================================
   - title: Main
     path: main
     icon: mdi:home-outline
@@ -108,7 +99,6 @@ views:
         "r2c1 r2c2 r2c3 r2c4"
         "r3c1 r3c2 r3c3 r3c4"
     cards:
-      # ---- Top navigation "tabs" -------------------------------------------
       - type: custom:mushroom-chips-card
         alignment: start
         chips:
@@ -145,18 +135,14 @@ views:
               navigation_path: /famil-foyer-beta/security
         view_layout:
           grid-area: nav
-
-      # ---- Row 1, Col 1 : Weather + date + time + current temp -------------
       - type: vertical-stack
         cards:
           - type: custom:mushroom-title-card
             alignment: start
             title: >-
-              {% set h = now().hour %}
-              {% if h >= 18 %} Good Evening!
-              {% elif h >= 12 %} Good Afternoon!
-              {% elif h >= 5 %} Good Morning!
-              {% else %} Welcome! {% endif %}
+              {% set h = now().hour %} {% if h >= 18 %} Good Evening! {% elif h
+              >= 12 %} Good Afternoon! {% elif h >= 5 %} Good Morning! {% else
+              %} Welcome! {% endif %}
             subtitle: "{{ now().strftime('%A, %b %-d · %-I:%M %p') }}"
           - type: custom:clock-weather-card-hui-icons
             entity: weather.klou
@@ -171,10 +157,17 @@ views:
             hide_date: false
             show_humidity: true
             use_browser_time: true
+          - type: custom:mushroom-chips-card
+            alignment: center
+            chips:
+              - type: template
+                icon: mdi:thermometer
+                content: "{{ states('sensor.thermostat_air_temperature') | round(1) }}°"
+              - type: template
+                icon: mdi:water-percent
+                content: "{{ states('sensor.thermostat_humidity') | round(0) }}%"
         view_layout:
           grid-area: r1c1
-
-      # ---- Row 1, Col 2 : Thermostat (round dial) --------------------------
       - type: custom:stack-in-card
         cards:
           - type: thermostat
@@ -186,19 +179,8 @@ views:
                   - heat
                   - fan_only
                   - "off"
-          - type: custom:mushroom-chips-card
-            alignment: center
-            chips:
-              - type: template
-                icon: mdi:thermometer
-                content: "{{ states('sensor.thermostat_air_temperature') | round(1) }}°"
-              - type: template
-                icon: mdi:water-percent
-                content: "{{ states('sensor.thermostat_humidity') | round(0) }}%"
         view_layout:
           grid-area: r1c2
-
-      # ---- Row 1, Col 3 : Calendar -----------------------------------------
       - type: vertical-stack
         cards:
           - type: custom:mushroom-title-card
@@ -223,8 +205,6 @@ views:
               entity: weather.klou
         view_layout:
           grid-area: r1c3
-
-      # ---- Row 1, Col 4 : Alarm --------------------------------------------
       - type: vertical-stack
         cards:
           - type: custom:mushroom-title-card
@@ -245,11 +225,8 @@ views:
               navigation_path: /famil-foyer-beta/security
         view_layout:
           grid-area: r1c4
-
-      # ---- Row 2, Col 1 : Garage + Living Room -----------------------------
       - type: vertical-stack
         cards:
-          # --- Garage ---
           - type: custom:stack-in-card
             mode: horizontal
             cards:
@@ -260,7 +237,9 @@ views:
                     variables:
                       - room_name: Garage
                       - secondary: >-
-                          {{ 'Door Open' if is_state('binary_sensor.garage_door_opening','on') else 'Door Closed' }}
+                          {{ 'Door Open' if
+                          is_state('binary_sensor.garage_door_opening','on')
+                          else 'Door Closed' }}
                   - type: custom:decluttering-card
                     template: big_icon_toggle_card
                     variables:
@@ -284,7 +263,9 @@ views:
                   - type: template
                     entity: binary_sensor.garage_door_opening
                     icon: >-
-                      {{ 'mdi:garage-open' if is_state('binary_sensor.garage_door_opening','on') else 'mdi:garage' }}
+                      {{ 'mdi:garage-open' if
+                      is_state('binary_sensor.garage_door_opening','on') else
+                      'mdi:garage' }}
                     tap_action:
                       action: more-info
                     card_mod:
@@ -309,7 +290,6 @@ views:
                   background: rgba(200, 200, 200, 0.35);
                   max-width: 100%; min-width: 50%; height: 150px; border-radius: 20px;
                 }
-          # --- Living Room ---
           - type: custom:stack-in-card
             mode: horizontal
             cards:
@@ -320,8 +300,10 @@ views:
                     variables:
                       - room_name: Living Room
                       - secondary: >-
-                          {{ states('sensor.living_room_sensor_temperature') | round(1) }}°F /
-                          {{ states('sensor.living_room_sensor_humidity') | round(0) }}%
+                          {{ states('sensor.living_room_sensor_temperature') |
+                          round(1) }}°F / {{
+                          states('sensor.living_room_sensor_humidity') |
+                          round(0) }}%
                   - type: custom:decluttering-card
                     template: big_icon_toggle_card
                     variables:
@@ -392,11 +374,8 @@ views:
                 }
         view_layout:
           grid-area: r2c1
-
-      # ---- Row 2, Col 2 : Master + Loft ------------------------------------
       - type: vertical-stack
         cards:
-          # --- Master ---
           - type: custom:stack-in-card
             mode: horizontal
             cards:
@@ -407,8 +386,11 @@ views:
                     variables:
                       - room_name: Master
                       - secondary: >-
-                          {{ states('sensor.bedroom_temperature_sensor_temperature') | round(1) }}°F /
-                          {{ states('sensor.bedroom_temperature_sensor_humidity') | round(0) }}%
+                          {{
+                          states('sensor.bedroom_temperature_sensor_temperature')
+                          | round(1) }}°F / {{
+                          states('sensor.bedroom_temperature_sensor_humidity') |
+                          round(0) }}%
                   - type: custom:decluttering-card
                     template: big_icon_toggle_card
                     variables:
@@ -477,7 +459,6 @@ views:
                     {% else %} rgba(224, 102, 102, 0.8) {% endif %};
                   max-width: 100%; min-width: 50%; height: 150px; border-radius: 20px;
                 }
-          # --- Loft ---
           - type: custom:stack-in-card
             mode: horizontal
             cards:
@@ -488,14 +469,17 @@ views:
                     variables:
                       - room_name: Loft
                       - secondary: >-
-                          {{ 'Motion' if is_state('binary_sensor.g3_flex_motion','on') else 'Clear' }} ·
-                          Vac {{ states('sensor.loft_l10s_ultra_battery_level') }}%
+                          {{ 'Motion' if
+                          is_state('binary_sensor.g3_flex_motion','on') else
+                          'Clear' }} · Vac {{
+                          states('sensor.loft_l10s_ultra_battery_level') }}%
                   - type: custom:mushroom-template-card
                     entity: vacuum.loft_l10s_ultra
                     layout: horizontal
                     icon: mdi:home-floor-2
-                    icon_color: |-
-                      {% if is_state('vacuum.loft_l10s_ultra','cleaning') %} #9fe7e8 {% else %} #5b5b5b {% endif %}
+                    icon_color: >-
+                      {% if is_state('vacuum.loft_l10s_ultra','cleaning') %}
+                      #9fe7e8 {% else %} #5b5b5b {% endif %}
                     tap_action:
                       action: more-info
                     primary_info: none
@@ -506,9 +490,11 @@ views:
                           .container {
                             border: 0px; width: 120px !important; height: 120px !important; border-radius: 50% !important;
                           }
-                        .: |
+                        .: >
                           ha-tile-icon { --mdc-icon-size: 90px !important; }
-                          ha-card { border: none; margin-top: -8px !important; margin-left: -24px !important; }
+
+                          ha-card { border: none; margin-top: -8px !important;
+                          margin-left: -24px !important; }
               - type: custom:mushroom-chips-card
                 chips:
                   - type: template
@@ -540,8 +526,6 @@ views:
                 }
         view_layout:
           grid-area: r2c2
-
-      # ---- Row 2, Col 3 : Patio & Deck -------------------------------------
       - type: custom:stack-in-card
         mode: horizontal
         cards:
@@ -552,7 +536,9 @@ views:
                 variables:
                   - room_name: Patio & Deck
                   - secondary: >-
-                      {{ 'Motion Detected' if is_state('binary_sensor.g4_instant_motion','on') else 'All Clear' }}
+                      {{ 'Motion Detected' if
+                      is_state('binary_sensor.g4_instant_motion','on') else 'All
+                      Clear' }}
               - type: custom:decluttering-card
                 template: big_icon_toggle_card
                 variables:
@@ -602,10 +588,6 @@ views:
             }
         view_layout:
           grid-area: r2c3
-
-      # ---- Row 2, Col 4 : (intentionally empty) ----------------------------
-
-      # ---- Row 3 : Cameras (Driveway, Baby Cam, Garage, Backyard) ----------
       - type: vertical-stack
         cards:
           - type: custom:decluttering-card
@@ -643,7 +625,6 @@ views:
                     }
         view_layout:
           grid-area: r3c1
-
       - type: vertical-stack
         cards:
           - type: custom:decluttering-card
@@ -668,7 +649,6 @@ views:
                     }
         view_layout:
           grid-area: r3c2
-
       - type: vertical-stack
         cards:
           - type: custom:decluttering-card
@@ -693,7 +673,6 @@ views:
                     }
         view_layout:
           grid-area: r3c3
-
       - type: vertical-stack
         cards:
           - type: custom:decluttering-card
@@ -718,10 +697,6 @@ views:
                     }
         view_layout:
           grid-area: r3c4
-
-  # ==========================================================================
-  # WEATHER  (hidden subview)
-  # ==========================================================================
   - title: Weather
     path: weather
     icon: mdi:weather-partly-cloudy
@@ -797,10 +772,6 @@ views:
                 name: Pressure
                 icon: mdi:gauge
             state_color: false
-
-  # ==========================================================================
-  # CAMERAS  (hidden subview)  - all cameras
-  # ==========================================================================
   - title: Cameras
     path: cameras
     icon: mdi:cctv
@@ -859,10 +830,6 @@ views:
           - type: custom:advanced-camera-card
             cameras:
               - camera_entity: camera.basement_wide_medium_resolution_channel
-
-  # ==========================================================================
-  # SECURITY / ALARM  (hidden subview)
-  # ==========================================================================
   - title: Security
     path: security
     icon: mdi:shield-home
@@ -892,9 +859,6 @@ views:
             heading: Alarm
           - type: custom:alarmo-card
             entity: alarm_control_panel.alarmo
-          - type: custom:mushroom-siren-card
-            entity: siren.living_room_siren_play_tone
-            name: Living Room Siren
       - type: grid
         cards:
           - type: heading
