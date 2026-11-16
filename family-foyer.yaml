@@ -446,16 +446,8 @@ views:
       - type: vertical-stack
         cards:
           - type: custom:mushroom-title-card
-            title: |-
-              {% set time = now().hour %} {% if time >= 18 %}
-                Good Evening!
-              {% elif time >= 12 %}
-                Good Afternoon!
-              {% elif time >= 5 %}
-                Good Morning!
-              {% else %}
-                Welcome!
-              {% endif %}
+            title: |
+              Today is {{ now().strftime('%a %b %-d - %-I:%M %p') }}
             alignment: start
             subtitle: |
               Today is {{ now().strftime('%a %b %-d - %-I:%M %p') }}
@@ -466,12 +458,12 @@ views:
             show_attributes: true
             show_last_changed: false
             use_12hour_format: true
-            icons_size: 32
+            icons_size: 24
             animated_icons: true
             forecast:
               type: hourly
               number_of_forecasts: 8
-              chart_height: 130
+              chart_height: 100
               show_time: true
               show_probability: true
               precipitation_type: probability
@@ -480,27 +472,28 @@ views:
             tap_action:
               action: navigate
               navigation_path: /family-foyer/notifications
-            card_mod:
-              style: |
-                ha-card {
-                  border: none;
-                  background: transparent;
-                  box-shadow: none;
-                }
-          - type: custom:clock-weather-card-hui-icons
-            entity: weather.klou
-            sun_entity: sun.sun
-            forecast_rows: 5
-            locale: en-US
-            time_format: 12
-            hide_today_section: true
-            hide_forecast_section: false
-            hide_clock: true
-            hide_date: true
-            use_browser_time: true
-            tap_action:
-              action: navigate
-              navigation_path: /family-foyer/notifications
+            locale: en
+            show_temperature: true
+            attributes_position: row
+            show_humidity: true
+            show_pressure: true
+            show_wind_direction: true
+            show_wind_speed: true
+            show_sun: true
+            show_feels_like: false
+            show_dew_point: false
+            show_wind_gust_speed: false
+            show_visibility: false
+            show_description: false
+            show_time: false
+            show_time_seconds: false
+            show_day: false
+            show_date: false
+            autoscroll: false
+            icon_style: style1
+            current_temp_size: 24
+            time_size: 24
+            day_date_size: 15
             card_mod:
               style: |
                 ha-card {
@@ -794,11 +787,9 @@ views:
                       style: >
                         ha-card {
                           position: relative;
-                        }
-                        {% set notifications =
-                        states('sensor.active_notification_count') | int %}
-                        {% if notifications > 0 %}
-                        ha-card:after {
+                        } {% set notifications =
+                        states('sensor.active_notification_count') | int %} {%
+                        if notifications > 0 %} ha-card:after {
                           content: "{{ notifications }}";
                           position: absolute;
                           top: -3px;
@@ -2473,8 +2464,8 @@ views:
                 variables:
                   - title: Radar
                   - subtitle: >-
-                      {% set weather = states.weather.klou.attributes
-                      %}{% set temp = weather.temperature %}{% set temp_unit =
+                      {% set weather = states.weather.klou.attributes %}{% set
+                      temp = weather.temperature %}{% set temp_unit =
                       weather.temperature_unit %}{% set humidity =
                       weather.humidity %}{% set wind_speed = weather.wind_speed
                       %}{% set wind_unit = weather.wind_speed_unit %}🌡️ {{ temp
@@ -2838,6 +2829,8 @@ views:
                                 --color: {{ 'var(--md-sys-color-on-primary)' if is_state('switch.rear_light_switch_grg', 'on') else 'none' }};
                                 --chip-background: {{ 'var(--md-sys-color-primary)' if is_state('switch.rear_light_switch_grg', 'on') else 'color-mix(in srgb, var(--md-sys-color-surface-variant) 40%, transparent)' }};
                               }
+      - type: grid
+        cards:
           - type: vertical-stack
             cards:
               - type: custom:decluttering-card
@@ -2899,6 +2892,8 @@ views:
                             --color: {{ 'var(--md-sys-color-on-primary)' if is_state('switch.master_bedroom_dresser_light_switch', 'on') else 'none' }};
                             --chip-background: {{ 'var(--md-sys-color-primary)' if is_state('switch.master_bedroom_dresser_light_switch', 'on') else 'color-mix(in srgb, var(--md-sys-color-surface-variant) 40%, transparent)' }};
                           }
+      - type: grid
+        cards:
           - type: vertical-stack
             cards:
               - type: custom:decluttering-card
@@ -2943,6 +2938,8 @@ views:
                 dimensions:
                   aspect_ratio_mode: static
                   height: '300'
+      - type: grid
+        cards:
           - type: vertical-stack
             cards:
               - type: custom:decluttering-card
@@ -2987,6 +2984,8 @@ views:
                 dimensions:
                   aspect_ratio_mode: static
                   height: '300'
+      - type: grid
+        cards:
           - type: vertical-stack
             cards:
               - type: custom:decluttering-card
@@ -3031,6 +3030,8 @@ views:
                 dimensions:
                   aspect_ratio_mode: static
                   height: '300'
+      - type: grid
+        cards:
           - type: vertical-stack
             cards:
               - type: custom:decluttering-card
