@@ -6,10 +6,10 @@ kiosk_mode:
 decluttering_templates:
   mushroom_title_card:
     default:
-      - title: ""
+      - title: ''
     card:
       type: custom:mushroom-title-card
-      title: "[[title]]"
+      title: '[[title]]'
       card_mod:
         style: |
           ha-card {
@@ -17,10 +17,10 @@ decluttering_templates:
           }
   mushroom_room_title_card:
     default:
-      - title: ""
+      - title: ''
     card:
       type: custom:mushroom-title-card
-      title: "[[title]]"
+      title: '[[title]]'
       card_mod:
         style: |
           ha-card {
@@ -28,12 +28,12 @@ decluttering_templates:
           }          
   mushroom_title_subtitle_card:
     default:
-      title: ""
-      subtitle: ""
+      title: ''
+      subtitle: ''
     card:
       type: custom:mushroom-title-card
-      title: "[[title]]"
-      subtitle: "[[subtitle]]"
+      title: '[[title]]'
+      subtitle: '[[subtitle]]'
       card_mod:
         style: |
           ha-card {
@@ -49,13 +49,13 @@ decluttering_templates:
       - navigation_path
     card:
       type: custom:mushroom-template-card
-      primary: "[[room_name]]"
+      primary: '[[room_name]]'
       secondary: >-
         {{ states('[[temperature_sensor]]') | round(1) }}°C / {{
         states('[[humidity_sensor]]') | round(1) }}%
       tap_action:
         action: navigate
-        navigation_path: "[[navigation_path]]"
+        navigation_path: '[[navigation_path]]'
       hold_action:
         action: none
       double_tap_action:
@@ -82,9 +82,9 @@ decluttering_templates:
       - icon
     card:
       type: custom:mushroom-template-card
-      entity: "[[entity]]"
+      entity: '[[entity]]'
       layout: horizontal
-      icon: "[[icon]]"
+      icon: '[[icon]]'
       icon_color: |-
         {% if is_state(entity, 'on') %} 
           #ecce85
@@ -122,14 +122,14 @@ decluttering_templates:
       - entity: light.example
     card:
       type: custom:my-slider-v2
-      entity: "[[entity]]"
+      entity: '[[entity]]'
       allowTapping: false
       allowSliding: true
       styles:
         container:
           - border-radius: 30px
         card:
-          - margin-top: "-8px"
+          - margin-top: -8px
           - height: 75px
         progress:
           - background: none
@@ -147,14 +147,14 @@ decluttering_templates:
       - entity: light.example
     card:
       type: custom:my-slider-v2
-      entity: "[[entity]]"
+      entity: '[[entity]]'
       allowTapping: false
       allowSliding: true
       styles:
         container:
           - border-radius: 30px
         card:
-          - margin-top: "-8px"
+          - margin-top: -8px
           - height: 75px
         progress:
           - background: var(--gradient-progress)
@@ -202,8 +202,8 @@ decluttering_templates:
             - type: conditional
               conditions:
                 - condition: state
-                  entity: "[[windows_entity]]"
-                  state: "on"
+                  entity: '[[windows_entity]]'
+                  state: 'on'
               chip:
                 type: template
                 content: |
@@ -254,8 +254,8 @@ decluttering_templates:
         - type: conditional
           conditions:
             - condition: state
-              entity: "[[door_entity]]"
-              state: "on"
+              entity: '[[door_entity]]'
+              state: 'on'
           chip:
             type: template
             content: |
@@ -272,8 +272,8 @@ decluttering_templates:
         - type: conditional
           conditions:
             - condition: state
-              entity: "[[window_entity]]"
-              state: "on"
+              entity: '[[window_entity]]'
+              state: 'on'
           chip:
             type: template
             content: |
@@ -290,31 +290,31 @@ decluttering_templates:
       height: 25
       compact: true
       entities:
-        - entity: "[[temp_entity]]"
-          name: "[[temp_name]]"
+        - entity: '[[temp_entity]]'
+          name: '[[temp_name]]'
           thresholds:
             - value: 16
-              color: "#CEB2F5"
+              color: '#CEB2F5'
             - value: 18
-              color: "#5EBDEE"
+              color: '#5EBDEE'
             - value: 21
-              color: "#9cc8b8"
+              color: '#9cc8b8'
             - value: 24
-              color: "#e7b562"
+              color: '#e7b562'
             - value: 27
-              color: "#FF564B"
+              color: '#FF564B'
             - value: 35
-              color: "#99332d"
-        - entity: "[[hum_entity]]"
-          name: "[[hum_name]]"
+              color: '#99332d'
+        - entity: '[[hum_entity]]'
+          name: '[[hum_name]]'
           show_labels: true
           thresholds:
             - value: 0
-              color: "#99332d"
+              color: '#99332d'
             - value: 31
-              color: "#228B22"
+              color: '#228B22'
             - value: 51
-              color: "#99332d"
+              color: '#99332d'
 button_card_templates:
   light_on_button:
     tap_action:
@@ -322,7 +322,7 @@ button_card_templates:
     styles:
       grid:
         - grid-template-columns: 64px 1fr
-        - grid-template-areas: "\"i n\""
+        - grid-template-areas: '"i n"'
       card:
         - background: none
         - height: 75px
@@ -344,7 +344,7 @@ button_card_templates:
     styles:
       grid:
         - grid-template-columns: 64px 1fr
-        - grid-template-areas: "\"i n\""
+        - grid-template-areas: '"i n"'
       card:
         - background: >-
             color-mix(in srgb, var(--md-sys-color-surface-variant) 40%,
@@ -368,7 +368,7 @@ button_card_templates:
     styles:
       grid:
         - grid-template-columns: 64px 1fr
-        - grid-template-areas: "\"i n\""
+        - grid-template-areas: '"i n"'
       card:
         - background: >-
             color-mix(in srgb, var(--md-sys-color-surface-variant) 40%,
@@ -385,7 +385,7 @@ button_card_templates:
         - font-weight: 400
         - color: var(--primary-text-color)
     state:
-      - value: "on"
+      - value: 'on'
         styles:
           card:
             - background: var(--md-sys-color-primary)
@@ -445,7 +445,7 @@ views:
                 name: >-
                   {{ state_attr('weather.klou', 'temperature') }} °F, {{
                   states('weather.klou') | title }}
-                icon: "{{ states('weather.klou') }}"
+                icon: '{{ states(''weather.klou'') }}'
                 tap_action:
                   action: navigate
                   navigation_path: /family-foyer/notifications
@@ -499,7 +499,7 @@ views:
                     color: var(--primary-text-color)
               - layout: name
                 entity: weather.klou
-                name: "{{ state_attr('weather.klou', 'humidity') }} %"
+                name: '{{ state_attr(''weather.klou'', ''humidity'') }} %'
                 tap_action:
                   action: navigate
                   navigation_path: /family-foyer/notifications
@@ -538,7 +538,7 @@ views:
                 icon: mdi:hvac
                 card:
                   type: markdown
-                  content: "## New Tab Content"
+                  content: '## New Tab Content'
               - title: Upstairs
                 icon: mdi:hvac
                 card:
@@ -657,7 +657,7 @@ views:
                                 - cool
                                 - heat
                                 - fan_only
-                                - "off"
+                                - 'off'
         view_layout:
           grid-area: title2
       - type: vertical-stack
@@ -683,7 +683,7 @@ views:
                         action: navigate
                         navigation_path: /family-foyer/alarmo
                       icon: mdi:bell-ring
-                      icon_color: "#d14f3a"
+                      icon_color: '#d14f3a'
                   - type: conditional
                     conditions:
                       - entity: alarm_control_panel.alarmo
@@ -696,7 +696,7 @@ views:
                         action: navigate
                         navigation_path: /family-foyer/alarmo
                       icon: mdi:shield-lock
-                      icon_color: "#69ac5a"
+                      icon_color: '#69ac5a'
                   - type: conditional
                     conditions:
                       - entity: alarm_control_panel.alarmo
@@ -709,7 +709,7 @@ views:
                         action: navigate
                         navigation_path: /family-foyer/alarmo
                       icon: mdi:shield
-                      icon_color: "#efa340"
+                      icon_color: '#efa340'
                   - type: conditional
                     conditions:
                       - entity: alarm_control_panel.alarmo
@@ -722,7 +722,7 @@ views:
                         action: navigate
                         navigation_path: /family-foyer/alarmo
                       icon: mdi:shield-outline
-                      icon_color: "#efa340"
+                      icon_color: '#efa340'
                   - type: conditional
                     conditions:
                       - entity: alarm_control_panel.alarmo
@@ -734,7 +734,7 @@ views:
                         action: navigate
                         navigation_path: /family-foyer/alarmo
                       icon: mdi:shield-off
-                      icon_color: "#disarmed"
+                      icon_color: '#disarmed'
                   - type: conditional
                     conditions:
                       - condition: state
@@ -745,7 +745,7 @@ views:
                       entity: sensor.latest_nearby_quake
                       tap_action:
                         action: navigate
-                        navigation_path: "#earthquake-warning"
+                        navigation_path: '#earthquake-warning'
                       icon: mdi:earth
                       icon_color: >
                         {% set mag = state_attr('sensor.latest_nearby_quake',
@@ -833,11 +833,11 @@ views:
                     }
           - entities:
               - entity: calendar.siddharth_s_calendar
-                accent_color: "#ff6a6a"
+                accent_color: '#ff6a6a'
                 show_time: false
                 show_location: false
               - entity: calendar.2
-                accent_color: "#71c8fe"
+                accent_color: '#71c8fe'
             days_to_show: 6
             compact_events_to_show: 6
             background_color: transparent
@@ -885,7 +885,7 @@ views:
             conditions:
               - condition: state
                 entity: media_player.your_media_here
-                state_not: "on"
+                state_not: 'on'
               - condition: state
                 entity: media_player.your_media_here
                 state_not: playing
@@ -2001,7 +2001,7 @@ views:
                       type: template
                       entity: sensor.soil_sensor_corner_moisture
                       icon: mdi:water-percent
-                      content: "{{ states('sensor.soil_sensor_corner_moisture') }}%"
+                      content: '{{ states(''sensor.soil_sensor_corner_moisture'') }}%'
                       icon_color: >
                         {% set moisture =
                         states('sensor.soil_sensor_corner_moisture') | int(0) %}
@@ -2018,7 +2018,7 @@ views:
                     conditions:
                       - condition: state
                         entity: sensor.house_maintenance_chip_card
-                        state: "true"
+                        state: 'true'
                     chip:
                       type: template
                       entity: sensor.house_maintenance_chip_card
@@ -2046,7 +2046,7 @@ views:
                     conditions:
                       - condition: state
                         entity: binary_sensor.door_sensor_grg_contact
-                        state: "on"
+                        state: 'on'
                     chip:
                       type: template
                       entity: binary_sensor.door_sensor_grg_contact
@@ -2063,7 +2063,7 @@ views:
                     conditions:
                       - condition: state
                         entity: binary_sensor.all_doors
-                        state: "on"
+                        state: 'on'
                     chip:
                       type: template
                       entity: binary_sensor.all_doors
@@ -2116,7 +2116,7 @@ views:
                       tap_action:
                         action: more-info
                       icon: mdi:tumble-dryer
-                      icon_color: "#880808"
+                      icon_color: '#880808'
                       content: Dryer Running
                   - type: conditional
                     conditions:
@@ -2127,7 +2127,7 @@ views:
                             state: playing
                           - condition: state
                             entity: media_player.all_speakers
-                            state: "on"
+                            state: 'on'
                     chip:
                       type: template
                       entity: media_player.all_speakers
@@ -2145,10 +2145,10 @@ views:
                     conditions:
                       - condition: state
                         entity: input_boolean.rubbish
-                        state: "on"
+                        state: 'on'
                       - condition: state
                         entity: input_boolean.recycle
-                        state: "on"
+                        state: 'on'
                 card:
                   type: conditional
                   conditions:
@@ -2156,10 +2156,10 @@ views:
                       conditions:
                         - condition: state
                           entity: input_boolean.rubbish
-                          state: "on"
+                          state: 'on'
                         - condition: state
                           entity: input_boolean.recycle
-                          state: "on"
+                          state: 'on'
                   card:
                     type: vertical-stack
                     cards:
@@ -2210,7 +2210,7 @@ views:
                         conditions:
                           - condition: state
                             entity: binary_sensor.show_wash_cuddly_timer
-                            state: "on"
+                            state: 'on'
                           - condition: state
                             entity: timer.wash_cuddly
                             state: idle
@@ -2222,7 +2222,7 @@ views:
                       bar_width: 60%
                       mushroom:
                         layout: vertical
-                        color: "#f385bc"
+                        color: '#f385bc'
                   - type: conditional
                     conditions:
                       - condition: state
@@ -2236,7 +2236,7 @@ views:
                       bar_width: 60%
                       mushroom:
                         layout: vertical
-                        color: "#f3c843"
+                        color: '#f3c843'
                   - type: conditional
                     conditions:
                       - condition: state
@@ -2264,7 +2264,7 @@ views:
                       bar_width: 60%
                       mushroom:
                         layout: vertical
-                        color: "#b5e0f7"
+                        color: '#b5e0f7'
                   - type: conditional
                     conditions:
                       - condition: state
@@ -2278,7 +2278,7 @@ views:
                       bar_width: 60%
                       mushroom:
                         layout: vertical
-                        color: "#D70040"
+                        color: '#D70040'
                   - type: conditional
                     conditions:
                       - condition: state
@@ -2292,7 +2292,7 @@ views:
                       bar_width: 60%
                       mushroom:
                         layout: vertical
-                        color: "#A020F0"
+                        color: '#A020F0'
                   - type: conditional
                     conditions:
                       - condition: state
@@ -2306,14 +2306,14 @@ views:
                       bar_width: 60%
                       mushroom:
                         layout: vertical
-                        color: "#4CBB17"
+                        color: '#4CBB17'
           - type: vertical-stack
             cards:
               - type: conditional
                 conditions:
                   - condition: state
                     entity: light.all_lights
-                    state: "on"
+                    state: 'on'
                 card:
                   type: custom:decluttering-card
                   template: mushroom_title_card
@@ -2329,7 +2329,7 @@ views:
                   include:
                     - group: light.all_lights
                       entity_id: light.lights_*
-                      state: "on"
+                      state: 'on'
                       options:
                         type: vertical-stack
                         cards:
@@ -2341,8 +2341,8 @@ views:
                             variables:
                               - entity: this.entity_id
                     - group: light.all_lights
-                      entity_id: "*led*"
-                      state: "on"
+                      entity_id: '*led*'
+                      state: 'on'
                       options:
                         type: vertical-stack
                         cards:
@@ -2363,7 +2363,7 @@ views:
                 conditions:
                   - condition: state
                     entity: switch.all_light_switches
-                    state: "on"
+                    state: 'on'
                 card:
                   type: custom:decluttering-card
                   template: mushroom_title_card
@@ -2378,8 +2378,8 @@ views:
                 filter:
                   include:
                     - group: switch.all_light_switches
-                      entity_id: "*switch*"
-                      state: "on"
+                      entity_id: '*switch*'
+                      state: 'on'
                       options:
                         type: custom:button-card
                         entity: this.entity_id
@@ -2593,7 +2593,7 @@ views:
                         curve: smooth
                         yaxis_id: temp
                         stroke_width: 2
-                        color: "#E53935"
+                        color: '#E53935'
                         data_generator: |
                           return entity.attributes.forecasts.map(f => {
                             return {
@@ -2674,7 +2674,7 @@ views:
                         type: line
                         curve: smooth
                         yaxis_id: speed
-                        color: "#0288D1"
+                        color: '#0288D1'
                         stroke_width: 2
                         data_generator: |
                           return entity.attributes.forecasts.map(f => {
@@ -2687,7 +2687,7 @@ views:
                         type: line
                         curve: smooth
                         yaxis_id: direction
-                        color: "#8E24AA"
+                        color: '#8E24AA'
                         stroke_width: 1
                         data_generator: |
                           return entity.attributes.forecasts.map(f => {
@@ -2716,8 +2716,7 @@ views:
               - type: custom:mod-card
                 card:
                   type: iframe
-                  url: >-
-                    https://embed.windy.com/embed2.html?lat=your_lat&lon=your_long&width=800&height=600
+                  url: https://embed.windy.com/embed2.html?lat=your_lat&lon=your_long&width=800&height=600
                 style: |
                   ha-card {
                     padding: 0;
@@ -2991,7 +2990,7 @@ views:
                       - camera_entity: camera.garage_camera_fluent
                     dimensions:
                       aspect_ratio_mode: static
-                      height: "300"
+                      height: '300'
                   - type: custom:mushroom-chips-card
                     alignment: start
                     chips:
