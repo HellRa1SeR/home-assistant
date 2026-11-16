@@ -1716,6 +1716,38 @@ views:
           - type: custom:advanced-camera-card
             cameras:
               - camera_entity: camera.driveway_low_resolution_channel
+                live_provider: webrtc-card
+            live:
+              controls:
+                builtin: false
+            menu:
+              style: hover
+              position: bottom
+              buttons:
+                mute:
+                  enabled: true
+                frigate:
+                  enabled: false
+                cameras:
+                  enabled: false
+                live:
+                  enabled: false
+                clips:
+                  enabled: false
+                snapshots:
+                  enabled: false
+                download:
+                  enabled: false
+                fullscreen:
+                  enabled: true
+                timeline:
+                  enabled: false
+                media_player:
+                  enabled: false
+                microphone:
+                  enabled: false
+                screenshot:
+                  enabled: false
             card_mod:
               style: |
                 ha-card {
@@ -1760,6 +1792,38 @@ views:
           - type: custom:advanced-camera-card
             cameras:
               - camera_entity: camera.baby_cam_medium_resolution_channel
+                live_provider: webrtc-card
+            live:
+              controls:
+                builtin: false
+            menu:
+              style: hover
+              position: bottom
+              buttons:
+                mute:
+                  enabled: true
+                frigate:
+                  enabled: false
+                cameras:
+                  enabled: false
+                live:
+                  enabled: false
+                clips:
+                  enabled: false
+                snapshots:
+                  enabled: false
+                download:
+                  enabled: false
+                fullscreen:
+                  enabled: true
+                timeline:
+                  enabled: false
+                media_player:
+                  enabled: false
+                microphone:
+                  enabled: false
+                screenshot:
+                  enabled: false
             card_mod:
               style: |
                 ha-card {
@@ -1790,6 +1854,38 @@ views:
           - type: custom:advanced-camera-card
             cameras:
               - camera_entity: camera.garage_low_resolution_channel
+                live_provider: webrtc-card
+            live:
+              controls:
+                builtin: false
+            menu:
+              style: hover
+              position: bottom
+              buttons:
+                mute:
+                  enabled: true
+                frigate:
+                  enabled: false
+                cameras:
+                  enabled: false
+                live:
+                  enabled: false
+                clips:
+                  enabled: false
+                snapshots:
+                  enabled: false
+                download:
+                  enabled: false
+                fullscreen:
+                  enabled: true
+                timeline:
+                  enabled: false
+                media_player:
+                  enabled: false
+                microphone:
+                  enabled: false
+                screenshot:
+                  enabled: false
             card_mod:
               style: |
                 ha-card {
@@ -1834,6 +1930,38 @@ views:
           - type: custom:advanced-camera-card
             cameras:
               - camera_entity: camera.backyard_medium_resolution_channel
+                live_provider: webrtc-card
+            live:
+              controls:
+                builtin: false
+            menu:
+              style: hover
+              position: bottom
+              buttons:
+                mute:
+                  enabled: true
+                frigate:
+                  enabled: false
+                cameras:
+                  enabled: false
+                live:
+                  enabled: false
+                clips:
+                  enabled: false
+                snapshots:
+                  enabled: false
+                download:
+                  enabled: false
+                fullscreen:
+                  enabled: true
+                timeline:
+                  enabled: false
+                media_player:
+                  enabled: false
+                microphone:
+                  enabled: false
+                screenshot:
+                  enabled: false
             card_mod:
               style: |
                 ha-card {
