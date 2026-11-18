@@ -467,9 +467,10 @@ views:
             entity: person.richa
             use_entity_picture: true
           - type: template
-            entity: sensor.richa_s_iphone_battery_level
+            entity: sensor.richas_phone_app_battery_level
             icon: >-
-              {% set b = states('sensor.richa_s_iphone_battery_level') | int(-1) %}
+              {% set s = states('sensor.richas_phone_app_battery_level') %}
+              {% set b = (s if s not in ['unknown', 'unavailable', 'none', ''] else state_attr('device_tracker.richas_phone_app', 'battery_level')) | int(-1) %}
               {% if b < 0 %} mdi:battery-unknown
               {% elif b >= 95 %} mdi:battery
               {% elif b >= 80 %} mdi:battery-80
@@ -479,11 +480,13 @@ views:
               {% else %} mdi:battery-alert
               {% endif %}
             icon_color: >-
-              {% set b = states('sensor.richa_s_iphone_battery_level') | int(-1) %}
+              {% set s = states('sensor.richas_phone_app_battery_level') %}
+              {% set b = (s if s not in ['unknown', 'unavailable', 'none', ''] else state_attr('device_tracker.richas_phone_app', 'battery_level')) | int(-1) %}
               {% if b < 0 %} grey {% elif b >= 50 %} green {% elif b >= 20 %} amber {% else %} red {% endif %}
             content: >-
-              {% set s = states('sensor.richa_s_iphone_battery_level') %}
-              {{ s ~ '%' if s not in ['unknown', 'unavailable', 'none', ''] else 'N/A' }}
+              {% set s = states('sensor.richas_phone_app_battery_level') %}
+              {% set b = s if s not in ['unknown', 'unavailable', 'none', ''] else state_attr('device_tracker.richas_phone_app', 'battery_level') %}
+              {{ b ~ '%' if b not in [none, 'unknown', 'unavailable', 'none', ''] else 'N/A' }}
             tap_action:
               action: more-info
             hold_action:
