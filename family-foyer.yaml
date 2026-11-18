@@ -463,15 +463,46 @@ views:
               action: none
             double_tap_action:
               action: none
+          - type: entity
+            entity: person.richa
+            use_entity_picture: true
           - type: template
+            entity: sensor.richa_s_iphone_battery_level
+            icon: >-
+              {% set b = states('sensor.richa_s_iphone_battery_level') | int(-1) %}
+              {% if b < 0 %} mdi:battery-unknown
+              {% elif b >= 95 %} mdi:battery
+              {% elif b >= 80 %} mdi:battery-80
+              {% elif b >= 60 %} mdi:battery-60
+              {% elif b >= 40 %} mdi:battery-40
+              {% elif b >= 20 %} mdi:battery-20
+              {% else %} mdi:battery-alert
+              {% endif %}
+            icon_color: >-
+              {% set b = states('sensor.richa_s_iphone_battery_level') | int(-1) %}
+              {% if b < 0 %} grey {% elif b >= 50 %} green {% elif b >= 20 %} amber {% else %} red {% endif %}
+            content: >-
+              {% set s = states('sensor.richa_s_iphone_battery_level') %}
+              {{ s ~ '%' if s not in ['unknown', 'unavailable', 'none', ''] else 'N/A' }}
+            tap_action:
+              action: more-info
+            hold_action:
+              action: none
+            double_tap_action:
+              action: none
+          - type: template
+            entity: todo.google_keep_grocery_list_for_home
             icon: mdi:cart-outline
             content: >-
-              {% set count = states('todo.shopping_list') %} {{ 'Shopping (' ~
-              count ~ ')' if count not in ['unknown', 'unavailable', 'none', '']
-              else 'Shopping' }}
+              {% set count = states('todo.google_keep_grocery_list_for_home') %}
+              {{ 'Shopping (' ~ count ~ ')' if count not in ['unknown', 'unavailable', 'none', ''] else 'Shopping' }}
             tap_action:
               action: navigate
-              navigation_path: /todo
+              navigation_path: /todo?entity_id=todo.google_keep_grocery_list_for_home
+            hold_action:
+              action: none
+            double_tap_action:
+              action: none
         view_layout:
           grid-area: nav
       - type: vertical-stack
