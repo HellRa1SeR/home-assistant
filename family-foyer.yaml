@@ -441,6 +441,37 @@ views:
             tap_action:
               action: navigate
               navigation_path: /family-foyer/alarmo
+          - type: entity
+            entity: person.siddharth
+            use_entity_picture: true
+          - type: template
+            entity: sensor.siddharth_s_phone_battery_level
+            icon: >-
+              {% set b = states('sensor.siddharth_s_phone_battery_level') |
+              int(0) %} {% if b >= 95 %} mdi:battery {% elif b >= 80 %}
+              mdi:battery-80 {% elif b >= 60 %} mdi:battery-60 {% elif b >= 40
+              %} mdi:battery-40 {% elif b >= 20 %} mdi:battery-20 {% else %}
+              mdi:battery-alert {% endif %}
+            icon_color: >-
+              {% set b = states('sensor.siddharth_s_phone_battery_level') |
+              int(0) %} {% if b >= 50 %} green {% elif b >= 20 %} amber {% else
+              %} red {% endif %}
+            content: '{{ states(''sensor.siddharth_s_phone_battery_level'') }}%'
+            tap_action:
+              action: more-info
+            hold_action:
+              action: none
+            double_tap_action:
+              action: none
+          - type: template
+            icon: mdi:cart-outline
+            content: >-
+              {% set count = states('todo.shopping_list') %} {{ 'Shopping (' ~
+              count ~ ')' if count not in ['unknown', 'unavailable', 'none', '']
+              else 'Shopping' }}
+            tap_action:
+              action: navigate
+              navigation_path: /todo
         view_layout:
           grid-area: nav
       - type: vertical-stack
@@ -1583,8 +1614,6 @@ views:
               buttons:
                 mute:
                   enabled: true
-                frigate:
-                  enabled: false
                 cameras:
                   enabled: false
                 live:
@@ -1604,6 +1633,8 @@ views:
                 microphone:
                   enabled: false
                 screenshot:
+                  enabled: false
+                iris:
                   enabled: false
             card_mod:
               style: |
@@ -1659,8 +1690,6 @@ views:
               buttons:
                 mute:
                   enabled: true
-                frigate:
-                  enabled: false
                 cameras:
                   enabled: false
                 live:
@@ -1680,6 +1709,8 @@ views:
                 microphone:
                   enabled: false
                 screenshot:
+                  enabled: false
+                iris:
                   enabled: false
             card_mod:
               style: |
@@ -1721,8 +1752,6 @@ views:
               buttons:
                 mute:
                   enabled: true
-                frigate:
-                  enabled: false
                 cameras:
                   enabled: false
                 live:
@@ -1742,6 +1771,8 @@ views:
                 microphone:
                   enabled: false
                 screenshot:
+                  enabled: false
+                iris:
                   enabled: false
             card_mod:
               style: |
@@ -1797,8 +1828,6 @@ views:
               buttons:
                 mute:
                   enabled: true
-                frigate:
-                  enabled: false
                 cameras:
                   enabled: false
                 live:
@@ -1818,6 +1847,8 @@ views:
                 microphone:
                   enabled: false
                 screenshot:
+                  enabled: false
+                iris:
                   enabled: false
             card_mod:
               style: |
@@ -1847,12 +1878,27 @@ views:
     icon: mdi:home-outline
     path: overview
     background:
-      opacity: 80
+      opacity: 100
       alignment: center
       size: cover
-      repeat: repeat
+      repeat: no-repeat
       attachment: fixed
-      image: /api/image/serve/fcc922c73fe69b2ee6bc6fc24d7ebe44/original
+      image: >-
+        data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"
+        width="1600" height="1000" viewBox="0 0 1600 1000"><defs><radialGradient
+        id="g1" cx="88%" cy="15%" r="60%"><stop offset="0%"
+        stop-color="%23c8f1ff"/><stop offset="100%" stop-color="%23c8f1ff"
+        stop-opacity="0"/></radialGradient><radialGradient id="g2" cx="85%"
+        cy="85%" r="65%"><stop offset="0%" stop-color="%23a9c4ff"/><stop
+        offset="100%" stop-color="%23a9c4ff"
+        stop-opacity="0"/></radialGradient><radialGradient id="g3" cx="20%"
+        cy="20%" r="70%"><stop offset="0%" stop-color="%23ffffff"/><stop
+        offset="100%" stop-color="%23f0f5ff"
+        stop-opacity="0"/></radialGradient></defs><rect width="1600"
+        height="1000" fill="%23f4f8ff"/><rect width="1600" height="1000"
+        fill="url(%23g3)"/><rect width="1600" height="1000"
+        fill="url(%23g1)"/><rect width="1600" height="1000"
+        fill="url(%23g2)"/></svg>
   - type: sections
     max_columns: 1
     icon: mdi:shield-lock
@@ -1903,12 +1949,27 @@ views:
       badges_wrap: wrap
     cards: []
     background:
-      opacity: 90
+      opacity: 100
       alignment: center
       size: cover
-      repeat: repeat
+      repeat: no-repeat
       attachment: fixed
-      image: /api/image/serve/fcc922c73fe69b2ee6bc6fc24d7ebe44/original
+      image: >-
+        data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"
+        width="1600" height="1000" viewBox="0 0 1600 1000"><defs><radialGradient
+        id="g1" cx="88%" cy="15%" r="60%"><stop offset="0%"
+        stop-color="%23c8f1ff"/><stop offset="100%" stop-color="%23c8f1ff"
+        stop-opacity="0"/></radialGradient><radialGradient id="g2" cx="85%"
+        cy="85%" r="65%"><stop offset="0%" stop-color="%23a9c4ff"/><stop
+        offset="100%" stop-color="%23a9c4ff"
+        stop-opacity="0"/></radialGradient><radialGradient id="g3" cx="20%"
+        cy="20%" r="70%"><stop offset="0%" stop-color="%23ffffff"/><stop
+        offset="100%" stop-color="%23f0f5ff"
+        stop-opacity="0"/></radialGradient></defs><rect width="1600"
+        height="1000" fill="%23f4f8ff"/><rect width="1600" height="1000"
+        fill="url(%23g3)"/><rect width="1600" height="1000"
+        fill="url(%23g1)"/><rect width="1600" height="1000"
+        fill="url(%23g2)"/></svg>
     subview: true
   - type: sections
     max_columns: 3
@@ -2473,12 +2534,27 @@ views:
       badges_position: top
       badges_wrap: wrap
     background:
-      opacity: 40
+      opacity: 100
       alignment: center
       size: cover
-      repeat: repeat
+      repeat: no-repeat
       attachment: fixed
-      image: /api/image/serve/fcc922c73fe69b2ee6bc6fc24d7ebe44/original
+      image: >-
+        data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"
+        width="1600" height="1000" viewBox="0 0 1600 1000"><defs><radialGradient
+        id="g1" cx="88%" cy="15%" r="60%"><stop offset="0%"
+        stop-color="%23c8f1ff"/><stop offset="100%" stop-color="%23c8f1ff"
+        stop-opacity="0"/></radialGradient><radialGradient id="g2" cx="85%"
+        cy="85%" r="65%"><stop offset="0%" stop-color="%23a9c4ff"/><stop
+        offset="100%" stop-color="%23a9c4ff"
+        stop-opacity="0"/></radialGradient><radialGradient id="g3" cx="20%"
+        cy="20%" r="70%"><stop offset="0%" stop-color="%23ffffff"/><stop
+        offset="100%" stop-color="%23f0f5ff"
+        stop-opacity="0"/></radialGradient></defs><rect width="1600"
+        height="1000" fill="%23f4f8ff"/><rect width="1600" height="1000"
+        fill="url(%23g3)"/><rect width="1600" height="1000"
+        fill="url(%23g1)"/><rect width="1600" height="1000"
+        fill="url(%23g2)"/></svg>
     subview: true
   - type: sections
     max_columns: 3
@@ -3063,10 +3139,25 @@ views:
       badges_wrap: wrap
     cards: []
     background:
-      opacity: 30
+      opacity: 100
       alignment: center
       size: cover
-      repeat: repeat
+      repeat: no-repeat
       attachment: fixed
-      image: /api/image/serve/fcc922c73fe69b2ee6bc6fc24d7ebe44/original
+      image: >-
+        data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"
+        width="1600" height="1000" viewBox="0 0 1600 1000"><defs><radialGradient
+        id="g1" cx="88%" cy="15%" r="60%"><stop offset="0%"
+        stop-color="%23c8f1ff"/><stop offset="100%" stop-color="%23c8f1ff"
+        stop-opacity="0"/></radialGradient><radialGradient id="g2" cx="85%"
+        cy="85%" r="65%"><stop offset="0%" stop-color="%23a9c4ff"/><stop
+        offset="100%" stop-color="%23a9c4ff"
+        stop-opacity="0"/></radialGradient><radialGradient id="g3" cx="20%"
+        cy="20%" r="70%"><stop offset="0%" stop-color="%23ffffff"/><stop
+        offset="100%" stop-color="%23f0f5ff"
+        stop-opacity="0"/></radialGradient></defs><rect width="1600"
+        height="1000" fill="%23f4f8ff"/><rect width="1600" height="1000"
+        fill="url(%23g3)"/><rect width="1600" height="1000"
+        fill="url(%23g1)"/><rect width="1600" height="1000"
+        fill="url(%23g2)"/></svg>
     subview: true
