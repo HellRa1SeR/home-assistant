@@ -2,7 +2,7 @@ kiosk_mode:
   user_settings:
     - users:
         - kiosk
-      kiosk: false
+      hide_header: true
 decluttering_templates:
   mushroom_title_card:
     default:
@@ -451,56 +451,21 @@ views:
             alignment: start
             subtitle: |
               Today is {{ now().strftime('%a %b %-d - %-I:%M %p') }}
-          - type: custom:weather-chart-card
+          - type: custom:clock-weather-card-hui-icons
             entity: weather.klou
-            show_main: true
-            show_current_condition: true
-            show_attributes: true
-            show_last_changed: false
-            use_12hour_format: true
-            icons_size: 24
-            animated_icons: true
-            forecast:
-              type: hourly
-              number_of_forecasts: 8
-              chart_height: 100
-              show_time: true
-              show_probability: true
-              precipitation_type: probability
-              labels_font_size: 11
-              temperature1_color: '#FBBC04'
+            sun_entity: sun.sun
+            forecast_rows: 4
+            locale: en-US
+            time_format: 12
+            hide_today_section: false
+            hide_forecast_section: false
+            hide_clock: true
+            hide_date: true
+            show_humidity: true
+            use_browser_time: true
             tap_action:
               action: navigate
               navigation_path: /family-foyer/notifications
-            locale: en
-            show_temperature: true
-            attributes_position: row
-            show_humidity: true
-            show_pressure: true
-            show_wind_direction: true
-            show_wind_speed: true
-            show_sun: true
-            show_feels_like: false
-            show_dew_point: false
-            show_wind_gust_speed: false
-            show_visibility: false
-            show_description: false
-            show_time: false
-            show_time_seconds: false
-            show_day: false
-            show_date: false
-            autoscroll: false
-            icon_style: style1
-            current_temp_size: 24
-            time_size: 24
-            day_date_size: 15
-            card_mod:
-              style: |
-                ha-card {
-                  border: none;
-                  background: transparent;
-                  box-shadow: none;
-                }
         view_layout:
           grid-area: title1
       - type: vertical-stack
